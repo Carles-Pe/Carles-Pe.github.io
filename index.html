@@ -1,0 +1,1526 @@
+<!DOCTYPE html><html lang=&quot;&quot;><head>
+	<title></title>
+	<meta charset=&quot;UTF-8&quot;>
+	<meta name=&quot;viewport&quot; content=&quot;width=device-width&quot;>
+	<link href=&quot;https://fonts.googleapis.com/css?family=Montserrat&quot; rel=&quot;stylesheet&quot; type=&quot;text/css&quot;>
+	<link href=&quot;https://fonts.googleapis.com/css?family=Playfair+Display&quot; rel=&quot;stylesheet&quot; type=&quot;text/css&quot;>
+	
+    <link type=&quot;text/css&quot; href=&quot;https://app-rsrc.getbee.io/public/resources/preview/OverlayScrollbars.css&quot; rel=&quot;stylesheet&quot;>
+    <script type=&quot;text/javascript&quot; src=&quot;https://app-rsrc.getbee.io/public/resources/preview/OverlayScrollbars.min.js&quot;></script>
+    <script>
+      document.addEventListener(&quot;DOMContentLoaded&quot;, function() {
+        OverlayScrollbars(document.querySelectorAll(&quot;body&quot;), { });
+      });
+      function scrollElementIntoView(elementId){
+        var element = document.getElementById(elementId);
+        if (element) {
+          element.scrollIntoView({ behavior: &quot;smooth&quot;, block: &quot;center&quot;, inline: &quot;nearest&quot; });
+        }
+      }
+    </script>
+  <style>
+
+		.bee-row,
+		.bee-row-content {
+			position: relative
+		}
+
+		.bee-form .bee-form-row .bee-field button {
+			font-size: inherit;
+			font-family: inherit
+		}
+
+		.bee-button .content,
+		.bee-row-14 .bee-col-2 .bee-block-3 .bee-button-container {
+			text-align: center
+		}
+
+		.bee-row-11 .bee-col-1,
+		.bee-row-11 .bee-col-2,
+		.bee-row-11 .bee-col-3,
+		.bee-row-11 .bee-col-4,
+		.bee-row-19 .bee-col-2 {
+			border-bottom: 0 solid #A87165;
+			border-left: 0 solid #A87165;
+			border-right: 0px solid #A87165;
+			border-top: 0 solid #A87165
+		}
+
+		body {
+			background-color: #FFFFFF;
+			color: #000000;
+			font-family: Montserrat, Trebuchet MS, Lucida Grande, Lucida Sans Unicode, Lucida Sans, Tahoma, sans-serif
+		}
+
+		a {
+			color: #7747ff
+		}
+
+		* {
+			box-sizing: border-box
+		}
+
+		body,
+		h1,
+		h2,
+		h3,
+		p {
+			margin: 0
+		}
+
+		.bee-menu .bee-hamburger-trigger {
+			display: none
+		}
+
+		.bee-row-content {
+			max-width: 900px;
+			margin: 0 auto;
+			display: flex
+		}
+
+		.bee-row-content .bee-col-w2 {
+			flex-basis: 16.6666666667%
+		}
+
+		.bee-row-content .bee-col-w3 {
+			flex-basis: 25%
+		}
+
+		.bee-row-content .bee-col-w4 {
+			flex-basis: 33.3333333333%
+		}
+
+		.bee-row-content .bee-col-w5 {
+			flex-basis: 41.6666666667%
+		}
+
+		.bee-row-content .bee-col-w6 {
+			flex-basis: 50%
+		}
+
+		.bee-row-content .bee-col-w7 {
+			flex-basis: 58.3333333333%
+		}
+
+		.bee-row-content .bee-col-w8 {
+			flex-basis: 66.6666666667%
+		}
+
+		.bee-row-14 .bee-col-2 .bee-block-3 div.label:not(.inline),
+		.bee-row-14 .bee-col-2 .bee-block-3 label:not(.inline),
+		.bee-row-22 .bee-col-4 .bee-block-2 div.label:not(.inline),
+		.bee-row-22 .bee-col-4 .bee-block-2 label:not(.inline),
+		.bee-row-content .bee-col-w12 {
+			flex-basis: 100%
+		}
+
+		.bee-button a,
+		.bee-icon .bee-icon-label-right a,
+		.bee-menu ul li a {
+			text-decoration: none
+		}
+
+		.bee-divider,
+		.bee-image {
+			overflow: auto
+		}
+
+		.bee-divider .center,
+		.bee-image .bee-center {
+			margin: 0 auto
+		}
+
+		.bee-image .bee-right {
+			float: right
+		}
+
+		.bee-row-11 .bee-col-1 .bee-block-1,
+		.bee-row-11 .bee-col-2 .bee-block-1,
+		.bee-row-11 .bee-col-3 .bee-block-1,
+		.bee-row-11 .bee-col-4 .bee-block-1,
+		.bee-row-14 .bee-col-2 .bee-block-3 .bee-form-row:not(.bee-sidelabel) input:not([type=checkbox]):not([type=radio]),
+		.bee-row-19 .bee-col-1 .bee-block-1,
+		.bee-row-2 .bee-col-2 .bee-block-1,
+		.bee-row-22 .bee-col-1 .bee-block-1,
+		.bee-row-22 .bee-col-4 .bee-block-2 .bee-form-row:not(.bee-sidelabel) input:not([type=checkbox]):not([type=radio]),
+		.bee-row-7 .bee-col-1 .bee-block-1,
+		.bee-row-7 .bee-col-2 .bee-block-1,
+		.bee-row-7 .bee-col-3 .bee-block-1 {
+			width: 100%
+		}
+
+		.bee-form .bee-form-row .bee-field {
+			padding: 3px;
+			display: flex;
+			flex: 1;
+			flex-wrap: wrap;
+			align-items: center
+		}
+
+		.bee-form .bee-form-row .bee-field.bee-inline-field {
+			flex-wrap: nowrap;
+			align-items: flex-start;
+			display: block
+		}
+
+		.bee-form .bee-form-row .bee-field .bee-form-option-wrapper {
+			align-items: flex-start;
+			display: inline-flex
+		}
+
+		.bee-form .bee-form-row .bee-field .bee-form-option-wrapper>input {
+			margin: 0 0 0 3px
+		}
+
+		.bee-form .bee-form-row .bee-field .bee-form-option-wrapper>label {
+			min-width: 0
+		}
+
+		.bee-form .bee-form-row .bee-field input:not([type=checkbox]):not([type=radio]) {
+			flex-grow: 1;
+			font-family: inherit;
+			font-size: inherit
+		}
+
+		.bee-form .bee-form-row .bee-field input[type=checkbox]:not(:first-of-type) {
+			margin-left: 15px
+		}
+
+		.bee-form .bee-form-row .bee-field .bee-button-container {
+			flex-grow: 1
+		}
+
+		.bee-form input[type=color] {
+			border: none;
+			height: 38px
+		}
+
+		.bee-form input[type=color]::-webkit-color-swatch-wrapper {
+			margin: 0;
+			padding: 2px
+		}
+
+		.bee-form input[type=color]::-webkit-color-swatch {
+			margin: 0;
+			padding: 0
+		}
+
+		.bee-icon {
+			display: inline-block;
+			vertical-align: middle
+		}
+
+		.bee-icon .bee-content {
+			display: flex;
+			align-items: center
+		}
+
+		.bee-image img {
+			display: block;
+			width: 100%
+		}
+
+		.bee-menu .bee-hamburger-controls {
+			cursor: pointer;
+			display: inline-block;
+			position: relative
+		}
+
+		.bee-menu .bee-hamburger-controls span {
+			display: block;
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			background-size: 100%;
+			background-repeat: no-repeat;
+			transition: .12s ease-in-out
+		}
+
+		.bee-menu ul {
+			list-style-type: none;
+			margin: 0;
+			padding: 0
+		}
+
+		.bee-menu ul.bee-horizontal li {
+			display: inline-block
+		}
+
+		.bee-paragraph {
+			overflow-wrap: anywhere
+		}
+
+		.bee-social .icon img {
+			max-height: 32px
+		}
+
+		.bee-row-1,
+		.bee-row-13,
+		.bee-row-14,
+		.bee-row-15,
+		.bee-row-21,
+		.bee-row-22,
+		.bee-row-23,
+		.bee-row-4,
+		.bee-row-5,
+		.bee-row-6,
+		.bee-row-7,
+		.bee-row-8 {
+			background-color: #f8f4f1;
+			background-repeat: no-repeat
+		}
+
+		.bee-row-24,
+		.bee-row-24 .bee-row-content {
+			background-color: #ffffff;
+			background-repeat: no-repeat
+		}
+
+		.bee-row-1 .bee-row-content,
+		.bee-row-10 .bee-row-content,
+		.bee-row-11 .bee-row-content,
+		.bee-row-12 .bee-row-content,
+		.bee-row-13 .bee-row-content,
+		.bee-row-14 .bee-row-content,
+		.bee-row-15 .bee-row-content,
+		.bee-row-16 .bee-row-content,
+		.bee-row-17 .bee-row-content,
+		.bee-row-18 .bee-row-content,
+		.bee-row-19 .bee-row-content,
+		.bee-row-2 .bee-row-content,
+		.bee-row-20 .bee-row-content,
+		.bee-row-21 .bee-row-content,
+		.bee-row-22 .bee-row-content,
+		.bee-row-23 .bee-row-content,
+		.bee-row-3 .bee-row-content,
+		.bee-row-4 .bee-row-content,
+		.bee-row-5 .bee-row-content,
+		.bee-row-6 .bee-row-content,
+		.bee-row-7 .bee-row-content,
+		.bee-row-8 .bee-row-content,
+		.bee-row-9 .bee-row-content {
+			background-repeat: no-repeat;
+			color: #000000
+		}
+
+		.bee-row-1 .bee-col-1,
+		.bee-row-1 .bee-col-2,
+		.bee-row-14 .bee-col-1,
+		.bee-row-14 .bee-col-2,
+		.bee-row-17 .bee-col-1,
+		.bee-row-17 .bee-col-2,
+		.bee-row-22 .bee-col-1,
+		.bee-row-22 .bee-col-2,
+		.bee-row-22 .bee-col-3,
+		.bee-row-22 .bee-col-4,
+		.bee-row-5 .bee-col-1,
+		.bee-row-5 .bee-col-2,
+		.bee-row-7 .bee-col-1,
+		.bee-row-7 .bee-col-2,
+		.bee-row-7 .bee-col-3,
+		.bee-row-9 .bee-col-1 {
+			padding: 20px
+		}
+
+		.bee-row-1 .bee-col-1 .bee-block-1 {
+			padding-bottom: 10px;
+			padding-top: 10px;
+			width: 100%
+		}
+
+		.bee-row-1 .bee-col-2 .bee-block-1 {
+			color: #000000;
+			font-family: inherit;
+			font-size: 18px;
+			text-align: right
+		}
+
+		.bee-row-10,
+		.bee-row-11,
+		.bee-row-12,
+		.bee-row-16,
+		.bee-row-17,
+		.bee-row-18,
+		.bee-row-19,
+		.bee-row-2,
+		.bee-row-20,
+		.bee-row-3,
+		.bee-row-9 {
+			background-repeat: no-repeat
+		}
+
+		.bee-row-2 .bee-col-1 {
+			padding: 60px 20px 20px
+		}
+
+		.bee-row-2 .bee-col-1 .bee-block-1 {
+			padding-top: 35px;
+			text-align: center;
+			width: 100%
+		}
+
+		.bee-row-2 .bee-col-1 .bee-block-2 {
+			padding-top: 45px
+		}
+
+		.bee-row-2 .bee-col-1 .bee-block-3 {
+			padding-top: 45px;
+			text-align: left
+		}
+
+		.bee-row-2 .bee-col-1 .bee-block-4,
+		.bee-row-22 .bee-col-1 .bee-block-3 {
+			padding-top: 15px
+		}
+
+		.bee-row-2 .bee-col-2 {
+			padding: 55px 20px 20px
+		}
+
+		.bee-row-14 .bee-col-2 .bee-block-1,
+		.bee-row-17 .bee-col-1 .bee-block-1,
+		.bee-row-19 .bee-col-2 .bee-block-12,
+		.bee-row-19 .bee-col-2 .bee-block-2,
+		.bee-row-19 .bee-col-2 .bee-block-7,
+		.bee-row-5 .bee-col-1 .bee-block-1,
+		.bee-row-9 .bee-col-1 .bee-block-2 {
+			text-align: center;
+			width: 100%
+		}
+
+		.bee-row-17 .bee-col-2 .bee-block-1,
+		.bee-row-5 .bee-col-2 .bee-block-1 {
+			padding-top: 20px;
+			text-align: right
+		}
+
+		.bee-row-7 .bee-col-1 .bee-block-2,
+		.bee-row-7 .bee-col-2 .bee-block-2,
+		.bee-row-7 .bee-col-3 .bee-block-2 {
+			padding-top: 15px;
+			text-align: center;
+			width: 100%
+		}
+
+		.bee-row-11 .bee-col-1 .bee-block-4,
+		.bee-row-11 .bee-col-2 .bee-block-4,
+		.bee-row-11 .bee-col-3 .bee-block-4,
+		.bee-row-11 .bee-col-4 .bee-block-4,
+		.bee-row-14 .bee-col-2 .bee-block-2,
+		.bee-row-19 .bee-col-1 .bee-block-4,
+		.bee-row-19 .bee-col-2 .bee-block-14,
+		.bee-row-19 .bee-col-2 .bee-block-4,
+		.bee-row-19 .bee-col-2 .bee-block-9,
+		.bee-row-22 .bee-col-1 .bee-block-2,
+		.bee-row-9 .bee-col-1 .bee-block-3 {
+			padding-top: 20px
+		}
+
+		.bee-row-11 .bee-col-1,
+		.bee-row-11 .bee-col-2,
+		.bee-row-11 .bee-col-3,
+		.bee-row-11 .bee-col-4 {
+			padding: 20px
+		}
+
+		.bee-row-11 .bee-col-1 .bee-block-2,
+		.bee-row-11 .bee-col-2 .bee-block-2,
+		.bee-row-11 .bee-col-3 .bee-block-2,
+		.bee-row-11 .bee-col-4 .bee-block-2 {
+			padding-top: 20px;
+			text-align: center;
+			width: 100%
+		}
+
+		.bee-row-11 .bee-col-1 .bee-block-3,
+		.bee-row-11 .bee-col-2 .bee-block-3,
+		.bee-row-11 .bee-col-3 .bee-block-3,
+		.bee-row-11 .bee-col-4 .bee-block-3 {
+			padding-top: 10px
+		}
+
+		.bee-row-11 .bee-col-1 .bee-block-5,
+		.bee-row-11 .bee-col-2 .bee-block-5,
+		.bee-row-11 .bee-col-3 .bee-block-5,
+		.bee-row-11 .bee-col-4 .bee-block-5 {
+			padding-top: 25px;
+			text-align: left
+		}
+
+		.bee-row-14 .bee-col-1 .bee-block-1 {
+			padding-top: 15px;
+			width: 100%
+		}
+
+		.bee-row-14 .bee-col-2 .bee-block-3 {
+			font-family: inherit;
+			font-size: 18px;
+			padding-top: 25px
+		}
+
+		.bee-row-19 .bee-col-1 {
+			padding-bottom: 20px;
+			padding-left: 20px;
+			padding-right: 20px
+		}
+
+		.bee-row-19 .bee-col-1 .bee-block-2 {
+			padding-top: 25px;
+			text-align: center;
+			width: 100%
+		}
+
+		.bee-row-19 .bee-col-1 .bee-block-3,
+		.bee-row-19 .bee-col-2 .bee-block-13,
+		.bee-row-19 .bee-col-2 .bee-block-3,
+		.bee-row-19 .bee-col-2 .bee-block-8 {
+			color: #000000;
+			font-family: inherit;
+			font-size: 16px;
+			padding-top: 5px;
+			text-align: left
+		}
+
+		.bee-row-19 .bee-col-1 .bee-block-5 {
+			padding-bottom: 20px;
+			padding-top: 30px;
+			text-align: left
+		}
+
+		.bee-row-19 .bee-col-2 {
+			padding-left: 20px;
+			padding-right: 20px
+		}
+
+		.bee-row-19 .bee-col-2 .bee-block-1 {
+			padding-bottom: 30px
+		}
+
+		.bee-row-19 .bee-col-2 .bee-block-10,
+		.bee-row-19 .bee-col-2 .bee-block-15,
+		.bee-row-19 .bee-col-2 .bee-block-5 {
+			padding-top: 15px;
+			text-align: left
+		}
+
+		.bee-row-19 .bee-col-2 .bee-block-11,
+		.bee-row-19 .bee-col-2 .bee-block-6 {
+			padding-bottom: 30px;
+			padding-top: 30px
+		}
+
+		.bee-row-19 .bee-col-2 .bee-block-16 {
+			padding-bottom: 20px;
+			padding-top: 30px
+		}
+
+		.bee-row-22 .bee-col-2 .bee-block-1,
+		.bee-row-22 .bee-col-3 .bee-block-1 {
+			padding-bottom: 15px;
+			text-align: center;
+			width: 100%
+		}
+
+		.bee-row-22 .bee-col-2 .bee-block-2,
+		.bee-row-22 .bee-col-3 .bee-block-2 {
+			color: #000000;
+			font-family: inherit;
+			font-size: 16px;
+			text-align: left
+		}
+
+		.bee-row-22 .bee-col-2 .bee-block-3 {
+			padding-bottom: 10px;
+			padding-top: 10px;
+			text-align: left
+		}
+
+		.bee-row-22 .bee-col-4 .bee-block-1 {
+			padding-bottom: 20px;
+			text-align: center;
+			width: 100%
+		}
+
+		.bee-row-22 .bee-col-4 .bee-block-2 {
+			font-family: inherit;
+			font-size: 16px
+		}
+
+		.bee-row-24 .bee-row-content {
+			color: #000000
+		}
+
+		.bee-row-22 .bee-col-2 .bee-block-2 li,
+		.bee-row-22 .bee-col-3 .bee-block-2 li,
+		.bee-row-24 .bee-col-1 {
+			padding-bottom: 5px;
+			padding-top: 5px
+		}
+
+		.bee-row-24 .bee-col-1 .bee-block-1 {
+			color: #1e0e4b;
+			font-family: Inter, sans-serif;
+			font-size: 15px;
+			padding-bottom: 5px;
+			padding-top: 5px;
+			text-align: center
+		}
+
+		.bee-row-2 .bee-col-1 .bee-block-1 h1 {
+			color: #000000;
+			direction: ltr;
+			font-family: &quot;Playfair Display&quot;, Georgia, serif;
+			font-size: 72px;
+			font-weight: 400;
+			letter-spacing: normal;
+			line-height: 120%;
+			text-align: left
+		}
+
+		.bee-row-2 .bee-col-1 .bee-block-2 {
+			color: #000000;
+			font-size: 34px;
+			letter-spacing: 0;
+			line-height: 120%;
+			text-align: left
+		}
+
+		.bee-row-1 .bee-col-2 .bee-block-1 li a,
+		.bee-row-11 .bee-col-1 .bee-block-4 a,
+		.bee-row-11 .bee-col-2 .bee-block-4 a,
+		.bee-row-11 .bee-col-3 .bee-block-4 a,
+		.bee-row-11 .bee-col-4 .bee-block-4 a,
+		.bee-row-14 .bee-col-2 .bee-block-2 a,
+		.bee-row-19 .bee-col-1 .bee-block-4 a,
+		.bee-row-2 .bee-col-1 .bee-block-2 a,
+		.bee-row-2 .bee-col-1 .bee-block-4 a,
+		.bee-row-22 .bee-col-1 .bee-block-2 a,
+		.bee-row-22 .bee-col-2 .bee-block-2 li a,
+		.bee-row-22 .bee-col-3 .bee-block-2 li a,
+		.bee-row-9 .bee-col-1 .bee-block-3 a {
+			color: #000000
+		}
+
+		.bee-row-11 .bee-col-1 .bee-block-3 p:not(:last-child),
+		.bee-row-11 .bee-col-1 .bee-block-4 p:not(:last-child),
+		.bee-row-11 .bee-col-2 .bee-block-3 p:not(:last-child),
+		.bee-row-11 .bee-col-2 .bee-block-4 p:not(:last-child),
+		.bee-row-11 .bee-col-3 .bee-block-3 p:not(:last-child),
+		.bee-row-11 .bee-col-3 .bee-block-4 p:not(:last-child),
+		.bee-row-11 .bee-col-4 .bee-block-3 p:not(:last-child),
+		.bee-row-11 .bee-col-4 .bee-block-4 p:not(:last-child),
+		.bee-row-14 .bee-col-2 .bee-block-2 p:not(:last-child),
+		.bee-row-19 .bee-col-1 .bee-block-4 p:not(:last-child),
+		.bee-row-19 .bee-col-2 .bee-block-14 p:not(:last-child),
+		.bee-row-19 .bee-col-2 .bee-block-4 p:not(:last-child),
+		.bee-row-19 .bee-col-2 .bee-block-9 p:not(:last-child),
+		.bee-row-2 .bee-col-1 .bee-block-2 p:not(:last-child),
+		.bee-row-2 .bee-col-1 .bee-block-4 p:not(:last-child),
+		.bee-row-22 .bee-col-1 .bee-block-2 p:not(:last-child),
+		.bee-row-22 .bee-col-1 .bee-block-3 p:not(:last-child),
+		.bee-row-9 .bee-col-1 .bee-block-3 p:not(:last-child) {
+			margin-bottom: undefined
+		}
+
+		.bee-row-2 .bee-col-1 .bee-block-4 {
+			color: #000000;
+			font-size: 20px;
+			letter-spacing: 1px;
+			line-height: 120%;
+			text-align: left
+		}
+
+		.bee-row-11 .bee-col-1 .bee-block-5 a,
+		.bee-row-11 .bee-col-2 .bee-block-5 a,
+		.bee-row-11 .bee-col-3 .bee-block-5 a,
+		.bee-row-11 .bee-col-4 .bee-block-5 a,
+		.bee-row-2 .bee-col-1 .bee-block-3 a {
+			background-color: #a87165;
+			border-radius: 0;
+			color: #ffffff;
+			direction: ltr;
+			font-family: inherit;
+			font-size: 22px;
+			letter-spacing: 2px;
+			line-height: 200%;
+			padding: 10px 40px;
+			width: auto
+		}
+
+		.bee-row-1 .bee-col-2 .bee-block-1 li {
+			padding: 5px 10px
+		}
+
+		.bee-row-14 .bee-col-2 .bee-block-1 h2,
+		.bee-row-17 .bee-col-1 .bee-block-1 h2,
+		.bee-row-5 .bee-col-1 .bee-block-1 h2,
+		.bee-row-9 .bee-col-1 .bee-block-2 h2 {
+			color: #000000;
+			direction: ltr;
+			font-family: &quot;Playfair Display&quot;, Georgia, serif;
+			font-size: 46px;
+			font-weight: 400;
+			letter-spacing: normal;
+			line-height: 120%;
+			text-align: left
+		}
+
+		.bee-row-17 .bee-col-2 .bee-block-1 a,
+		.bee-row-5 .bee-col-2 .bee-block-1 a {
+			border-radius: 0;
+			color: #a87165;
+			direction: ltr;
+			font-family: inherit;
+			font-size: 22px;
+			letter-spacing: 2px;
+			line-height: 200%;
+			width: auto
+		}
+
+		.bee-row-7 .bee-col-1 .bee-block-2 h3,
+		.bee-row-7 .bee-col-2 .bee-block-2 h3,
+		.bee-row-7 .bee-col-3 .bee-block-2 h3 {
+			color: #000000;
+			direction: ltr;
+			font-family: &quot;Playfair Display&quot;, Georgia, serif;
+			font-size: 22px;
+			font-weight: 400;
+			letter-spacing: normal;
+			line-height: 120%;
+			text-align: center
+		}
+
+		.bee-row-14 .bee-col-2 .bee-block-2,
+		.bee-row-9 .bee-col-1 .bee-block-3 {
+			color: #000000;
+			font-size: 18px;
+			letter-spacing: 0;
+			line-height: 150%;
+			text-align: left
+		}
+
+		.bee-row-11 .bee-col-1 .bee-block-2 h3,
+		.bee-row-11 .bee-col-2 .bee-block-2 h3,
+		.bee-row-11 .bee-col-3 .bee-block-2 h3,
+		.bee-row-11 .bee-col-4 .bee-block-2 h3,
+		.bee-row-19 .bee-col-1 .bee-block-2 h3,
+		.bee-row-19 .bee-col-2 .bee-block-12 h3,
+		.bee-row-19 .bee-col-2 .bee-block-2 h3,
+		.bee-row-19 .bee-col-2 .bee-block-7 h3,
+		.bee-row-22 .bee-col-2 .bee-block-1 h3,
+		.bee-row-22 .bee-col-3 .bee-block-1 h3,
+		.bee-row-22 .bee-col-4 .bee-block-1 h3 {
+			color: #000000;
+			direction: ltr;
+			font-family: &quot;Playfair Display&quot;, Georgia, serif;
+			font-size: 22px;
+			font-weight: 400;
+			letter-spacing: normal;
+			line-height: 120%;
+			text-align: left
+		}
+
+		.bee-row-11 .bee-col-1 .bee-block-3,
+		.bee-row-11 .bee-col-2 .bee-block-3,
+		.bee-row-11 .bee-col-3 .bee-block-3,
+		.bee-row-11 .bee-col-4 .bee-block-3 {
+			color: #a87165;
+			font-size: 26px;
+			line-height: 120%;
+			text-align: left
+		}
+
+		.bee-row-11 .bee-col-1 .bee-block-3 a,
+		.bee-row-11 .bee-col-2 .bee-block-3 a,
+		.bee-row-11 .bee-col-3 .bee-block-3 a,
+		.bee-row-11 .bee-col-4 .bee-block-3 a,
+		.bee-row-19 .bee-col-2 .bee-block-14 a,
+		.bee-row-19 .bee-col-2 .bee-block-4 a,
+		.bee-row-19 .bee-col-2 .bee-block-9 a {
+			color: #a87165
+		}
+
+		.bee-row-11 .bee-col-1 .bee-block-4,
+		.bee-row-11 .bee-col-2 .bee-block-4,
+		.bee-row-11 .bee-col-3 .bee-block-4,
+		.bee-row-11 .bee-col-4 .bee-block-4,
+		.bee-row-19 .bee-col-1 .bee-block-4,
+		.bee-row-19 .bee-col-2 .bee-block-14,
+		.bee-row-19 .bee-col-2 .bee-block-4,
+		.bee-row-19 .bee-col-2 .bee-block-9 {
+			color: #000000;
+			font-size: 16px;
+			letter-spacing: 0;
+			line-height: 150%;
+			text-align: left
+		}
+
+		.bee-row-19 .bee-col-1 .bee-block-3 .bee-icon-image,
+		.bee-row-19 .bee-col-2 .bee-block-13 .bee-icon-image,
+		.bee-row-19 .bee-col-2 .bee-block-3 .bee-icon-image,
+		.bee-row-19 .bee-col-2 .bee-block-8 .bee-icon-image {
+			padding: 5px 10px 5px 0
+		}
+
+		.bee-row-19 .bee-col-1 .bee-block-3 .bee-icon:not(.bee-icon-first) .bee-content,
+		.bee-row-19 .bee-col-2 .bee-block-13 .bee-icon:not(.bee-icon-first) .bee-content,
+		.bee-row-19 .bee-col-2 .bee-block-3 .bee-icon:not(.bee-icon-first) .bee-content,
+		.bee-row-19 .bee-col-2 .bee-block-8 .bee-icon:not(.bee-icon-first) .bee-content,
+		.bee-row-24 .bee-col-1 .bee-block-1 .bee-icon:not(.bee-icon-first) .bee-content {
+			margin-left: 0
+		}
+
+		.bee-row-19 .bee-col-1 .bee-block-3 .bee-icon::not(.bee-icon-last) .bee-content {
+			margin-right: 0
+		}
+
+		.bee-row-19 .bee-col-1 .bee-block-5 a {
+			background-color: #a87165;
+			border-radius: 0;
+			color: #ffffff;
+			direction: ltr;
+			font-family: inherit;
+			font-size: 18px;
+			letter-spacing: 2px;
+			line-height: 200%;
+			padding: 10px 30px;
+			width: auto
+		}
+
+		.bee-row-19 .bee-col-2 .bee-block-3 .bee-icon::not(.bee-icon-last) .bee-content {
+			margin-right: 0
+		}
+
+		.bee-row-19 .bee-col-2 .bee-block-10 a,
+		.bee-row-19 .bee-col-2 .bee-block-15 a,
+		.bee-row-19 .bee-col-2 .bee-block-5 a {
+			border-radius: 0;
+			color: #a87165;
+			direction: ltr;
+			font-family: inherit;
+			font-size: 16px;
+			letter-spacing: 1px;
+			line-height: 200%;
+			width: auto
+		}
+
+		.bee-row-19 .bee-col-2 .bee-block-8 .bee-icon::not(.bee-icon-last) .bee-content {
+			margin-right: 0
+		}
+
+		.bee-row-19 .bee-col-2 .bee-block-13 .bee-icon::not(.bee-icon-last) .bee-content {
+			margin-right: 0
+		}
+
+		.bee-row-22 .bee-col-1 .bee-block-2 {
+			color: #9d8a8a;
+			font-size: 16px;
+			line-height: 150%;
+			text-align: left
+		}
+
+		.bee-row-22 .bee-col-1 .bee-block-3 {
+			color: #9d8a8a;
+			font-size: 16px;
+			line-height: 120%;
+			text-align: left
+		}
+
+		.bee-row-22 .bee-col-1 .bee-block-3 a {
+			color: #d7fff3
+		}
+
+		@media (max-width:768px) {
+			.bee-form form {
+				width: 100% !important
+			}
+
+			img.bee-fullwidthOnMobile {
+				max-width: none !important
+			}
+
+			.bee-menu ul.with-bee-hamburger {
+				display: none;
+				padding: 5px 0;
+				position: relative;
+				top: -4px
+			}
+
+			.bee-menu ul.with-bee-hamburger li {
+				display: block;
+				text-align: center
+			}
+
+			.bee-menu ul.with-bee-hamburger li a {
+				text-decoration: none
+			}
+
+			.bee-menu ul.with-bee-hamburger span {
+				display: none
+			}
+
+			#bee-hamburger-memu-r0c1m0:checked~ul,
+			.bee-row-content:not(.no_stack) {
+				display: block
+			}
+
+			.bee-row-1 .bee-col-2 .bee-block-1 .bee-hamburger-controls {
+				width: 48px;
+				height: 48px;
+				background-color: #ffffff;
+				border-radius: 50%
+			}
+
+			.bee-row-1 .bee-col-2 .bee-block-1 .bee-hamburger-controls span {
+				width: 24px;
+				height: 24px
+			}
+
+			.bee-row-1 .bee-col-2 .bee-block-1 .bee-hamburger-controls span.bee-hamburger-open,
+			.bee-row-22 .bee-col-2 .bee-block-2 .bee-hamburger-controls span.bee-hamburger-open,
+			.bee-row-22 .bee-col-3 .bee-block-2 .bee-hamburger-controls span.bee-hamburger-open {
+				background-image: url(&quot;data:image/svg+xml;base64,PHN2ZyBoZWlnaHQ9IjY0IiB2aWV3Qm94PSIwIDAgNjQgNjQiIHdpZHRoPSI2NCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48ZyBmaWxsPSIjMDAwMDAwIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiPjxyZWN0IGhlaWdodD0iMTIiIHJ4PSI2IiB3aWR0aD0iNjQiLz48cmVjdCBoZWlnaHQ9IjEyIiByeD0iNiIgd2lkdGg9IjY0IiB5PSI1MiIvPjxyZWN0IGhlaWdodD0iMTIiIHJ4PSI2IiB3aWR0aD0iNjQiIHk9IjI2Ii8+PC9nPjwvc3ZnPg==&quot;);
+				transform: translate(-50%, -50%) scaleY(1)
+			}
+
+			.bee-row-1 .bee-col-2 .bee-block-1 .bee-hamburger-controls span.bee-hamburger-close,
+			.bee-row-22 .bee-col-2 .bee-block-2 .bee-hamburger-controls span.bee-hamburger-close,
+			.bee-row-22 .bee-col-3 .bee-block-2 .bee-hamburger-controls span.bee-hamburger-close {
+				background-image: url(&quot;data:image/svg+xml;base64,PHN2ZyBoZWlnaHQ9IjY0IiB2aWV3Qm94PSIwIDAgNjQgNjQiIHdpZHRoPSI2NCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48ZyBmaWxsPSIjMDAwMDAwIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiPjxyZWN0IGhlaWdodD0iMTIiIHJ4PSI2IiB0cmFuc2Zvcm09Im1hdHJpeCgtLjcwNzEwNjc4IC0uNzA3MTA2NzggLjcwNzEwNjc4IC0uNzA3MTA2NzggMzEuOTkxMzc4IDc3LjIzNDAxOSkiIHdpZHRoPSI4MiIgeD0iLTkuMDA4NjIyIiB5PSIyNS45OTEzNzgiLz48cmVjdCBoZWlnaHQ9IjEyIiByeD0iNiIgdHJhbnNmb3JtPSJtYXRyaXgoLS43MDcxMDY3OCAuNzA3MTA2NzggLS43MDcxMDY3OCAtLjcwNzEwNjc4IDc3LjgxOTgwNiAzMi4yMzQwMTkpIiB3aWR0aD0iODIiIHg9Ii04Ljc2NTk4MSIgeT0iMjYuMjM0MDE5Ii8+PC9nPjwvc3ZnPg==&quot;);
+				transform: translate(-50%, -50%) scaleY(0)
+			}
+
+			.bee-row-1 .bee-col-2 .bee-block-1 ul.with-bee-hamburger {
+				background-color: #ffffff
+			}
+
+			.bee-row-1 .bee-col-2 .bee-block-1 ul.with-bee-hamburger li,
+			.bee-row-1 .bee-col-2 .bee-block-1 ul.with-bee-hamburger li a,
+			.bee-row-22 .bee-col-2 .bee-block-2 ul.with-bee-hamburger li,
+			.bee-row-22 .bee-col-2 .bee-block-2 ul.with-bee-hamburger li a,
+			.bee-row-22 .bee-col-3 .bee-block-2 ul.with-bee-hamburger li,
+			.bee-row-22 .bee-col-3 .bee-block-2 ul.with-bee-hamburger li a {
+				color: #000000
+			}
+
+			#bee-hamburger-memu-r0c1m0:checked~.bee-hamburger-controls .bee-hamburger-open {
+				transform: translate(-50%, -50%) scaleY(0)
+			}
+
+			#bee-hamburger-memu-r0c1m0:checked~.bee-hamburger-controls .bee-hamburger-close {
+				transform: translate(-50%, -50%) scaleY(1)
+			}
+
+			.bee-row-22 .bee-col-2 .bee-block-2 .bee-hamburger-controls,
+			.bee-row-22 .bee-col-3 .bee-block-2 .bee-hamburger-controls {
+				width: 36px;
+				height: 36px;
+				background-color: #d7fff3;
+				border-radius: 50%
+			}
+
+			.bee-row-22 .bee-col-2 .bee-block-2 .bee-hamburger-controls span,
+			.bee-row-22 .bee-col-3 .bee-block-2 .bee-hamburger-controls span {
+				width: 18px;
+				height: 18px
+			}
+
+			.bee-row-22 .bee-col-2 .bee-block-2 ul.with-bee-hamburger,
+			.bee-row-22 .bee-col-3 .bee-block-2 ul.with-bee-hamburger {
+				background-color: #d7fff3
+			}
+		}
+
+		.bee-row-24 .bee-col-1 .bee-block-1 .bee-icon-image {
+			padding: 5px 6px 5px 5px
+		}
+
+		.bee-row-24 .bee-col-1 .bee-block-1 .bee-icon::not(.bee-icon-last) .bee-content {
+			margin-right: 0
+		}
+
+		.bee-row-14 .bee-col-2 .bee-block-3,
+		.bee-row-22 .bee-col-4 .bee-block-2,
+		.bee-row-22 .bee-col-4 .bee-block-2 .bee-button-container {
+			text-align: left
+		}
+
+		.bee-row-14 .bee-col-2 .bee-block-3 form,
+		.bee-row-22 .bee-col-4 .bee-block-2 form {
+			display: inline-block;
+			width: 100%
+		}
+
+		.bee-row-14 .bee-col-2 .bee-block-3 div.label,
+		.bee-row-14 .bee-col-2 .bee-block-3 label,
+		.bee-row-22 .bee-col-4 .bee-block-2 div.label,
+		.bee-row-22 .bee-col-4 .bee-block-2 label {
+			color: #000000;
+			line-height: 200%;
+			text-align: left;
+			display: block
+		}
+
+		.bee-row-14 .bee-col-2 .bee-block-3 ::-webkit-input-placeholder {
+			color: #000000
+		}
+
+		.bee-row-14 .bee-col-2 .bee-block-3 :-moz-placeholder {
+			color: #000000
+		}
+
+		.bee-row-14 .bee-col-2 .bee-block-3 ::-moz-placeholder {
+			color: #000000
+		}
+
+		.bee-row-14 .bee-col-2 .bee-block-3 :-ms-input-placeholder {
+			color: #000000
+		}
+
+		.bee-row-14 .bee-col-2 .bee-block-3 .bee-field>label:first-child,
+		.bee-row-14 .bee-col-2 .bee-block-3 div.label,
+		.bee-row-22 .bee-col-4 .bee-block-2 .bee-field>label:first-child,
+		.bee-row-22 .bee-col-4 .bee-block-2 div.label {
+			padding: 3px
+		}
+
+		.bee-row-14 .bee-col-2 .bee-block-3 .bee-field.bee-inline-field input[type=checkbox] {
+			position: relative;
+			color: purple;
+			top: 12px
+		}
+
+		.bee-row-14 .bee-col-2 .bee-block-3 input:not([type=checkbox]):not([type=radio]):not([type=image]) {
+			background-color: #ffffff;
+			border-bottom: 1px solid #A87165;
+			border-left: 1px solid #A87165;
+			border-radius: 0;
+			border-right: 1px solid #A87165;
+			border-top: 1px solid #A87165;
+			color: #000000;
+			padding: 10px;
+			min-height: 56px
+		}
+
+		.bee-row-14 .bee-col-2 .bee-block-3 input:not([type=checkbox]):not([type=radio]):focus,
+		.bee-row-22 .bee-col-4 .bee-block-2 input:not([type=checkbox]):not([type=radio]):focus {
+			outline-color: #ffea55
+		}
+
+		.bee-row-14 .bee-col-2 .bee-block-3 button,
+		.bee-row-22 .bee-col-4 .bee-block-2 button {
+			background-color: #a87165;
+			border-bottom: 0 solid transparent;
+			border-left: 0 solid transparent;
+			border-radius: 0;
+			border-right: 0px solid transparent;
+			border-top: 0 solid transparent;
+			color: #ffffff;
+			letter-spacing: 2px;
+			line-height: 200%;
+			padding: 10px 20px;
+			width: 100%
+		}
+
+		.bee-row-22 .bee-col-4 .bee-block-2 ::-webkit-input-placeholder {
+			color: #000000
+		}
+
+		.bee-row-22 .bee-col-4 .bee-block-2 :-moz-placeholder {
+			color: #000000
+		}
+
+		.bee-row-22 .bee-col-4 .bee-block-2 ::-moz-placeholder {
+			color: #000000
+		}
+
+		.bee-row-22 .bee-col-4 .bee-block-2 :-ms-input-placeholder {
+			color: #000000
+		}
+
+		.bee-row-22 .bee-col-4 .bee-block-2 .bee-field.bee-inline-field input[type=checkbox] {
+			position: relative;
+			color: purple;
+			top: 10px
+		}
+
+		.bee-row-22 .bee-col-4 .bee-block-2 input:not([type=checkbox]):not([type=radio]):not([type=image]) {
+			background-color: #ffffff;
+			border-bottom: 1px solid #A87165;
+			border-left: 1px solid #A87165;
+			border-radius: 0;
+			border-right: 1px solid #A87165;
+			border-top: 1px solid #A87165;
+			color: #000000;
+			padding: 10px;
+			min-height: 52px
+		}
+	</style>
+</head>
+
+<body>
+	<div class=&quot;bee-page-container&quot;>
+		<div class=&quot;bee-row bee-row-1&quot;>
+			<div class=&quot;bee-row-content no_stack&quot;>
+				<div class=&quot;bee-col bee-col-1 bee-col-w7&quot;>
+					<div class=&quot;bee-block bee-block-1 bee-image&quot;><img class=&quot; bee-fixedwidth&quot; src=&quot;https://d1oco4z2z1fhwp.cloudfront.net/templates/default/4421/logo.png&quot; style=&quot;max-width:242px;&quot; alt=&quot;Logo&quot;></div>
+				</div>
+				<div class=&quot;bee-col bee-col-2 bee-col-w5&quot;>
+					<div class=&quot;bee-block bee-block-1 bee-menu&quot;>
+						<nav class=&quot;bee-menu&quot;><input class=&quot;bee-hamburger-trigger&quot; type=&quot;checkbox&quot; id=&quot;bee-hamburger-memu-r0c1m0&quot;><label class=&quot;bee-hamburger-controls&quot; for=&quot;bee-hamburger-memu-r0c1m0&quot;><span class=&quot;bee-hamburger-open&quot;></span><span class=&quot;bee-hamburger-close&quot;></span></label>
+							<ul class=&quot;bee-horizontal with-bee-hamburger&quot;>
+								<li><a href=&quot;http://www.example.com/&quot; target=&quot;_blank&quot; title=&quot;&quot;>Catalog</a></li>
+								<li><a href=&quot;http://www.example.com/&quot; target=&quot;_blank&quot; title=&quot;&quot;>About</a></li>
+								<li><a href=&quot;http://www.example.com/&quot; target=&quot;_blank&quot; title=&quot;&quot;>Blog</a></li>
+							</ul>
+						</nav>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class=&quot;bee-row bee-row-2&quot;>
+			<div class=&quot;bee-row-content&quot;>
+				<div class=&quot;bee-col bee-col-1 bee-col-w6&quot;>
+					<div class=&quot;bee-block bee-block-1 bee-heading&quot;>
+						<h1>Mystery Sale </h1>
+					</div>
+					<div class=&quot;bee-block bee-block-2 bee-paragraph&quot;>
+						<p style=&quot;word-break:break-word;&quot;><span>Get up to 50% off on selected items.</span></p>
+					</div>
+					<div class=&quot;bee-block bee-block-3 bee-button&quot;><a style=&quot;font-size: 22px; display: inline-block;&quot; class=&quot;bee-button-content&quot; href=&quot;http://www.example.com/&quot; target=&quot;_blank&quot;><span style=&quot;word-break: break-word; font-size: 22px; line-height: 200%; letter-spacing: 2px;&quot;><span style=&quot;font-size: 22px;&quot;>SHOP NOW</span></span></a></div>
+					<div class=&quot;bee-block bee-block-4 bee-paragraph&quot;>
+						<p style=&quot;word-break:break-word;&quot;><span><span style=&quot;color:#9d8a8a;&quot;>USE CODE:</span> MYSTERY</span></p>
+					</div>
+				</div>
+				<div class=&quot;bee-col bee-col-2 bee-col-w6&quot;>
+					<div class=&quot;bee-block bee-block-1 bee-image&quot;><img class=&quot;bee-right bee-fixedwidth bee-fullwidthOnMobile&quot; src=&quot;https://d1oco4z2z1fhwp.cloudfront.net/templates/default/4421/main.png&quot; style=&quot;max-width:369px;&quot; alt=&quot;Girl wearing jewellery&quot;></div>
+				</div>
+			</div>
+		</div>
+		<div class=&quot;bee-row bee-row-3&quot;>
+			<div class=&quot;bee-row-content&quot;>
+				<div class=&quot;bee-col bee-col-1 bee-col-w12&quot;>
+					<div class=&quot;bee-block bee-block-1 bee-divider&quot;>
+						<div class=&quot;spacer&quot; style=&quot;height:40px;&quot;></div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class=&quot;bee-row bee-row-4&quot;>
+			<div class=&quot;bee-row-content&quot;>
+				<div class=&quot;bee-col bee-col-1 bee-col-w12&quot;>
+					<div class=&quot;bee-block bee-block-1 bee-divider&quot;>
+						<div class=&quot;spacer&quot; style=&quot;height:40px;&quot;></div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class=&quot;bee-row bee-row-5&quot;>
+			<div class=&quot;bee-row-content&quot;>
+				<div class=&quot;bee-col bee-col-1 bee-col-w8&quot;>
+					<div class=&quot;bee-block bee-block-1 bee-heading&quot;>
+						<h2>Catalog </h2>
+					</div>
+				</div>
+				<div class=&quot;bee-col bee-col-2 bee-col-w4&quot;>
+					<div class=&quot;bee-block bee-block-1 bee-button&quot;><a style=&quot;font-size: 22px; display: inline-block;&quot; class=&quot;bee-button-content&quot; href=&quot;http://www.example.com/&quot; target=&quot;_blank&quot;><span style=&quot;word-break: break-word; font-size: 22px; line-height: 200%; letter-spacing: 2px;&quot;><span style=&quot;font-size: 22px;&quot;>SEE ALL →</span></span></a></div>
+				</div>
+			</div>
+		</div>
+		<div class=&quot;bee-row bee-row-6&quot;>
+			<div class=&quot;bee-row-content&quot;>
+				<div class=&quot;bee-col bee-col-1 bee-col-w12&quot;>
+					<div class=&quot;bee-block bee-block-1 bee-divider&quot;>
+						<div class=&quot;spacer&quot; style=&quot;height:10px;&quot;></div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class=&quot;bee-row bee-row-7&quot;>
+			<div class=&quot;bee-row-content&quot;>
+				<div class=&quot;bee-col bee-col-1 bee-col-w4&quot;>
+					<div class=&quot;bee-block bee-block-1 bee-image&quot;><a href=&quot;http://www.example.com/&quot; target=&quot;_blank&quot;><img class=&quot;bee-center bee-fixedwidth bee-fullwidthOnMobile&quot; src=&quot;https://d1oco4z2z1fhwp.cloudfront.net/templates/default/4421/category1.png&quot; style=&quot;max-width:260px;&quot; alt=&quot;Ring&quot;></a></div>
+					<div class=&quot;bee-block bee-block-2 bee-heading&quot;>
+						<h3><span style=&quot;color: #000000;&quot;><a href=&quot;http://www.example.com/&quot; target=&quot;_blank&quot; style=&quot;text-decoration: none; color: #000000;&quot; rel=&quot;noopener&quot;>Rings</a></span> </h3>
+					</div>
+				</div>
+				<div class=&quot;bee-col bee-col-2 bee-col-w4&quot;>
+					<div class=&quot;bee-block bee-block-1 bee-image&quot;><a href=&quot;http://www.example.com/&quot; target=&quot;_blank&quot;><img class=&quot;bee-center bee-fixedwidth bee-fullwidthOnMobile&quot; src=&quot;https://d1oco4z2z1fhwp.cloudfront.net/templates/default/4421/category2.png&quot; style=&quot;max-width:260px;&quot; alt=&quot;Necklace&quot;></a></div>
+					<div class=&quot;bee-block bee-block-2 bee-heading&quot;>
+						<h3><span style=&quot;color: #000000;&quot;><a href=&quot;http://www.example.com/&quot; target=&quot;_blank&quot; style=&quot;text-decoration: none; color: #000000;&quot; rel=&quot;noopener&quot;>Necklaces</a></span> </h3>
+					</div>
+				</div>
+				<div class=&quot;bee-col bee-col-3 bee-col-w4&quot;>
+					<div class=&quot;bee-block bee-block-1 bee-image&quot;><a href=&quot;http://www.example.com/&quot; target=&quot;_blank&quot;><img class=&quot;bee-center bee-fixedwidth bee-fullwidthOnMobile&quot; src=&quot;https://d1oco4z2z1fhwp.cloudfront.net/templates/default/4421/category3.png&quot; style=&quot;max-width:260px;&quot; alt=&quot;Earring&quot;></a></div>
+					<div class=&quot;bee-block bee-block-2 bee-heading&quot;>
+						<h3><span style=&quot;color: #000000;&quot;><a href=&quot;http://www.example.com/&quot; target=&quot;_blank&quot; style=&quot;text-decoration: none; color: #000000;&quot; rel=&quot;noopener&quot;>Earrings</a></span> </h3>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class=&quot;bee-row bee-row-8&quot;>
+			<div class=&quot;bee-row-content&quot;>
+				<div class=&quot;bee-col bee-col-1 bee-col-w12&quot;>
+					<div class=&quot;bee-block bee-block-1 bee-divider&quot;>
+						<div class=&quot;spacer&quot; style=&quot;height:60px;&quot;></div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class=&quot;bee-row bee-row-9&quot;>
+			<div class=&quot;bee-row-content&quot;>
+				<div class=&quot;bee-col bee-col-1 bee-col-w12&quot;>
+					<div class=&quot;bee-block bee-block-1 bee-divider&quot;>
+						<div class=&quot;spacer&quot; style=&quot;height:50px;&quot;></div>
+					</div>
+					<div class=&quot;bee-block bee-block-2 bee-heading&quot;>
+						<h2>Special offer </h2>
+					</div>
+					<div class=&quot;bee-block bee-block-3 bee-paragraph&quot;>
+						<p style=&quot;word-break:break-word;&quot;><span>Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</span></p>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class=&quot;bee-row bee-row-10&quot;>
+			<div class=&quot;bee-row-content&quot;>
+				<div class=&quot;bee-col bee-col-1 bee-col-w12&quot;>
+					<div class=&quot;bee-block bee-block-1 bee-divider&quot;>
+						<div class=&quot;spacer&quot; style=&quot;height:10px;&quot;></div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class=&quot;bee-row bee-row-11&quot;>
+			<div class=&quot;bee-row-content&quot;>
+				<div class=&quot;bee-col bee-col-1 bee-col-w3&quot;>
+					<div class=&quot;bee-block bee-block-1 bee-image&quot;><img class=&quot; bee-fixedwidth bee-fullwidthOnMobile&quot; src=&quot;https://d1oco4z2z1fhwp.cloudfront.net/templates/default/4421/item1.jpg&quot; style=&quot;max-width:185px;&quot; alt=&quot;Necklace&quot;></div>
+					<div class=&quot;bee-block bee-block-2 bee-heading&quot;>
+						<h3>Lorem Ipsum<br> </h3>
+					</div>
+					<div class=&quot;bee-block bee-block-3 bee-paragraph&quot;>
+						<p style=&quot;word-break:break-word;&quot;><span>$5 000</span></p>
+					</div>
+					<div class=&quot;bee-block bee-block-4 bee-paragraph&quot;>
+						<p style=&quot;word-break:break-word;&quot;><span>Tincidunt amet ut laoreet magna aliquam erat volutpat.</span></p>
+					</div>
+					<div class=&quot;bee-block bee-block-5 bee-button&quot;><a style=&quot;font-size: 22px; display: inline-block;&quot; class=&quot;bee-button-content&quot; href=&quot;http://www.example.com/&quot; target=&quot;_blank&quot;><span style=&quot;word-break: break-word; font-size: 22px; line-height: 200%; letter-spacing: 2px;&quot;><span style=&quot;font-size: 22px;&quot;>BUY</span></span></a></div>
+				</div>
+				<div class=&quot;bee-col bee-col-2 bee-col-w3&quot;>
+					<div class=&quot;bee-block bee-block-1 bee-image&quot;><img class=&quot; bee-fixedwidth bee-fullwidthOnMobile&quot; src=&quot;https://d1oco4z2z1fhwp.cloudfront.net/templates/default/4421/item2.jpg&quot; style=&quot;max-width:185px;&quot; alt=&quot;Ring&quot;></div>
+					<div class=&quot;bee-block bee-block-2 bee-heading&quot;>
+						<h3>Lorem Ipsum<br> </h3>
+					</div>
+					<div class=&quot;bee-block bee-block-3 bee-paragraph&quot;>
+						<p style=&quot;word-break:break-word;&quot;><span>$2 000</span></p>
+					</div>
+					<div class=&quot;bee-block bee-block-4 bee-paragraph&quot;>
+						<p style=&quot;word-break:break-word;&quot;><span>Tincidunt amet ut laoreet magna aliquam erat volutpat.</span></p>
+					</div>
+					<div class=&quot;bee-block bee-block-5 bee-button&quot;><a style=&quot;font-size: 22px; display: inline-block;&quot; class=&quot;bee-button-content&quot; href=&quot;http://www.example.com/&quot; target=&quot;_blank&quot;><span style=&quot;word-break: break-word; font-size: 22px; line-height: 200%; letter-spacing: 2px;&quot;><span style=&quot;font-size: 22px;&quot;>BUY</span></span></a></div>
+				</div>
+				<div class=&quot;bee-col bee-col-3 bee-col-w3&quot;>
+					<div class=&quot;bee-block bee-block-1 bee-image&quot;><img class=&quot; bee-fixedwidth bee-fullwidthOnMobile&quot; src=&quot;https://d1oco4z2z1fhwp.cloudfront.net/templates/default/4421/item3.jpg&quot; style=&quot;max-width:185px;&quot; alt=&quot;Bracelet&quot;></div>
+					<div class=&quot;bee-block bee-block-2 bee-heading&quot;>
+						<h3>Lorem Ipsum<br> </h3>
+					</div>
+					<div class=&quot;bee-block bee-block-3 bee-paragraph&quot;>
+						<p style=&quot;word-break:break-word;&quot;><span>$3 000</span></p>
+					</div>
+					<div class=&quot;bee-block bee-block-4 bee-paragraph&quot;>
+						<p style=&quot;word-break:break-word;&quot;><span>Tincidunt amet ut laoreet magna aliquam erat volutpat.</span></p>
+					</div>
+					<div class=&quot;bee-block bee-block-5 bee-button&quot;><a style=&quot;font-size: 22px; display: inline-block;&quot; class=&quot;bee-button-content&quot; href=&quot;http://www.example.com/&quot; target=&quot;_blank&quot;><span style=&quot;word-break: break-word; font-size: 22px; line-height: 200%; letter-spacing: 2px;&quot;><span style=&quot;font-size: 22px;&quot;>BUY</span></span></a></div>
+				</div>
+				<div class=&quot;bee-col bee-col-4 bee-col-w3&quot;>
+					<div class=&quot;bee-block bee-block-1 bee-image&quot;><img class=&quot; bee-fixedwidth bee-fullwidthOnMobile&quot; src=&quot;https://d1oco4z2z1fhwp.cloudfront.net/templates/default/4421/item4.jpg&quot; style=&quot;max-width:185px;&quot; alt=&quot;Necklace&quot;></div>
+					<div class=&quot;bee-block bee-block-2 bee-heading&quot;>
+						<h3>Lorem Ipsum<br> </h3>
+					</div>
+					<div class=&quot;bee-block bee-block-3 bee-paragraph&quot;>
+						<p style=&quot;word-break:break-word;&quot;><span>$1 000</span></p>
+					</div>
+					<div class=&quot;bee-block bee-block-4 bee-paragraph&quot;>
+						<p style=&quot;word-break:break-word;&quot;><span>Tincidunt amet ut laoreet magna aliquam erat volutpat.</span></p>
+					</div>
+					<div class=&quot;bee-block bee-block-5 bee-button&quot;><a style=&quot;font-size: 22px; display: inline-block;&quot; class=&quot;bee-button-content&quot; href=&quot;http://www.example.com/&quot; target=&quot;_blank&quot;><span style=&quot;word-break: break-word; font-size: 22px; line-height: 200%; letter-spacing: 2px;&quot;><span style=&quot;font-size: 22px;&quot;>BUY</span></span></a></div>
+				</div>
+			</div>
+		</div>
+		<div class=&quot;bee-row bee-row-12&quot;>
+			<div class=&quot;bee-row-content&quot;>
+				<div class=&quot;bee-col bee-col-1 bee-col-w12&quot;>
+					<div class=&quot;bee-block bee-block-1 bee-divider&quot;>
+						<div class=&quot;spacer&quot; style=&quot;height:60px;&quot;></div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class=&quot;bee-row bee-row-13&quot;>
+			<div class=&quot;bee-row-content&quot;>
+				<div class=&quot;bee-col bee-col-1 bee-col-w12&quot;>
+					<div class=&quot;bee-block bee-block-1 bee-divider&quot;>
+						<div class=&quot;spacer&quot; style=&quot;height:40px;&quot;></div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class=&quot;bee-row bee-row-14&quot;>
+			<div class=&quot;bee-row-content&quot;>
+				<div class=&quot;bee-col bee-col-1 bee-col-w6&quot;>
+					<div class=&quot;bee-block bee-block-1 bee-image&quot;><img class=&quot;bee-center bee-fixedwidth bee-fullwidthOnMobile&quot; src=&quot;https://d1oco4z2z1fhwp.cloudfront.net/templates/default/4421/special.png&quot; style=&quot;max-width:410px;&quot; alt=&quot;Special offer image&quot;></div>
+				</div>
+				<div class=&quot;bee-col bee-col-2 bee-col-w6&quot;>
+					<div class=&quot;bee-block bee-block-1 bee-heading&quot;>
+						<h2>Sign up for more special offers </h2>
+					</div>
+					<div class=&quot;bee-block bee-block-2 bee-paragraph&quot;>
+						<p style=&quot;word-break:break-word;&quot;><span>Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</span></p>
+					</div>
+					<div class=&quot;bee-block bee-block-3 bee-form&quot;>
+						<form accept-charset=&quot;UTF-8&quot; action=&quot;ACTION_PLACEHOLDER&quot; autocomplete=&quot;on&quot; enctype=&quot;multipart/form-data&quot; method=&quot;post&quot; target=&quot;_self&quot;>
+							<div class=&quot;bee-form-row&quot;>
+								<div class=&quot;bee-field bee-field-r13c1m2i1&quot;><input id=&quot;r13c1m2i1&quot; name=&quot;firstname&quot; type=&quot;text&quot; placeholder=&quot;Name&quot; required=&quot;&quot;></div>
+							</div>
+							<div class=&quot;bee-form-row&quot;>
+								<div class=&quot;bee-field bee-field-r13c1m2i3&quot;><input id=&quot;r13c1m2i3&quot; name=&quot;email&quot; type=&quot;email&quot; placeholder=&quot;Email&quot; required=&quot;&quot;></div>
+							</div>
+							<div class=&quot;bee-form-row&quot;>
+								<div class=&quot;bee-field bee-field-r13c1m2i10 bee-inline-field&quot;><span class=&quot;bee-form-option-wrapper&quot;><input id=&quot;r13c1m2i10&quot; name=&quot;privacy_policy&quot; type=&quot;checkbox&quot;><label class=&quot;inline&quot; for=&quot;r13c1m2i10&quot;>&amp;nbsp;I agree to the <a href=&quot;https://your_privacy_url&quot; target=&quot;_blank&quot;>Privacy Policy</a></label></span></div>
+							</div>
+							<div class=&quot;bee-form-row&quot;>
+								<div class=&quot;bee-field bee-field-r13c1m2i11&quot;>
+									<div class=&quot;bee-button-container&quot;><button id=&quot;r13c1m2i11&quot; name=&quot;submit&quot; type=&quot;submit&quot; value=&quot;SIGN UP&quot;>SIGN UP</button></div>
+								</div>
+							</div>
+						</form>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class=&quot;bee-row bee-row-15&quot;>
+			<div class=&quot;bee-row-content&quot;>
+				<div class=&quot;bee-col bee-col-1 bee-col-w12&quot;>
+					<div class=&quot;bee-block bee-block-1 bee-divider&quot;>
+						<div class=&quot;spacer&quot; style=&quot;height:40px;&quot;></div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class=&quot;bee-row bee-row-16&quot;>
+			<div class=&quot;bee-row-content&quot;>
+				<div class=&quot;bee-col bee-col-1 bee-col-w12&quot;>
+					<div class=&quot;bee-block bee-block-1 bee-divider&quot;>
+						<div class=&quot;spacer&quot; style=&quot;height:50px;&quot;></div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class=&quot;bee-row bee-row-17&quot;>
+			<div class=&quot;bee-row-content&quot;>
+				<div class=&quot;bee-col bee-col-1 bee-col-w8&quot;>
+					<div class=&quot;bee-block bee-block-1 bee-heading&quot;>
+						<h2>Blog </h2>
+					</div>
+				</div>
+				<div class=&quot;bee-col bee-col-2 bee-col-w4&quot;>
+					<div class=&quot;bee-block bee-block-1 bee-button&quot;><a style=&quot;font-size: 22px; display: inline-block;&quot; class=&quot;bee-button-content&quot; href=&quot;http://www.example.com/&quot; target=&quot;_blank&quot;><span style=&quot;word-break: break-word; font-size: 22px; line-height: 200%; letter-spacing: 2px;&quot;><span style=&quot;font-size: 22px;&quot;>SEE ALL →</span></span></a></div>
+				</div>
+			</div>
+		</div>
+		<div class=&quot;bee-row bee-row-18&quot;>
+			<div class=&quot;bee-row-content&quot;>
+				<div class=&quot;bee-col bee-col-1 bee-col-w12&quot;>
+					<div class=&quot;bee-block bee-block-1 bee-divider&quot;>
+						<div class=&quot;spacer&quot; style=&quot;height:30px;&quot;></div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class=&quot;bee-row bee-row-19&quot;>
+			<div class=&quot;bee-row-content&quot;>
+				<div class=&quot;bee-col bee-col-1 bee-col-w8&quot;>
+					<div class=&quot;bee-block bee-block-1 bee-image&quot;><img class=&quot;bee-center bee-fixedwidth bee-fullwidthOnMobile&quot; src=&quot;https://d1oco4z2z1fhwp.cloudfront.net/templates/default/4421/blog_image.jpg&quot; style=&quot;max-width:560px;&quot; alt=&quot;Blog image&quot;></div>
+					<div class=&quot;bee-block bee-block-2 bee-heading&quot;>
+						<h3><a href=&quot;javascript:void('example.com')&quot; style=&quot;text-decoration: none; color: #000000;&quot; rel=&quot;noopener&quot;>Lorem Ipsum Dolor Sit Amet</a> </h3>
+					</div>
+					<div class=&quot;bee-block bee-block-3 bee-icons&quot;>
+						<div class=&quot;bee-icon bee-icon-last&quot;>
+							<div class=&quot;bee-content&quot;>
+								<div class=&quot;bee-icon-image&quot;><img src=&quot;https://d1oco4z2z1fhwp.cloudfront.net/templates/default/4421/calendar.png&quot; height=&quot;32px&quot; width=&quot;auto&quot;></div>
+								<div class=&quot;bee-icon-label bee-icon-label-right&quot;>10/10/2021</div>
+							</div>
+						</div>
+					</div>
+					<div class=&quot;bee-block bee-block-4 bee-paragraph&quot;>
+						<p style=&quot;word-break:break-word;&quot;><span>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.</span></p>
+					</div>
+					<div class=&quot;bee-block bee-block-5 bee-button&quot;><a style=&quot;font-size: 18px; display: inline-block;&quot; class=&quot;bee-button-content&quot; href=&quot;http://www.example.com/&quot; target=&quot;_blank&quot;><span style=&quot;word-break: break-word; font-size: 18px; line-height: 200%; letter-spacing: 2px;&quot;><span style=&quot;font-size: 18px;&quot;>READ MORE</span></span></a></div>
+				</div>
+				<div class=&quot;bee-col bee-col-2 bee-col-w4&quot;>
+					<div class=&quot;bee-block bee-block-1 bee-divider&quot;>
+						<div class=&quot;center bee-separator&quot; style=&quot;border-top:1px solid #A87165;width:100%;&quot;></div>
+					</div>
+					<div class=&quot;bee-block bee-block-2 bee-heading&quot;>
+						<h3><a href=&quot;javascript:void('example.com')&quot; style=&quot;text-decoration: none; color: #000000;&quot; rel=&quot;noopener&quot;>Lorem Ipsum Dolor</a> </h3>
+					</div>
+					<div class=&quot;bee-block bee-block-3 bee-icons&quot;>
+						<div class=&quot;bee-icon bee-icon-last&quot;>
+							<div class=&quot;bee-content&quot;>
+								<div class=&quot;bee-icon-image&quot;><img src=&quot;https://d1oco4z2z1fhwp.cloudfront.net/templates/default/4421/calendar.png&quot; height=&quot;32px&quot; width=&quot;auto&quot;></div>
+								<div class=&quot;bee-icon-label bee-icon-label-right&quot;>10/10/2021</div>
+							</div>
+						</div>
+					</div>
+					<div class=&quot;bee-block bee-block-4 bee-paragraph&quot;>
+						<p style=&quot;word-break:break-word;&quot;><span>Lorem ipsum dolor sit amet, consectetuer adipiscing elit...</span></p>
+					</div>
+					<div class=&quot;bee-block bee-block-5 bee-button&quot;><a style=&quot;font-size: 16px; display: inline-block;&quot; class=&quot;bee-button-content&quot; href=&quot;http://www.example.com/&quot; target=&quot;_blank&quot;><span style=&quot;word-break: break-word; font-size: 16px; line-height: 200%; letter-spacing: 1px;&quot;>READ MORE →</span></a></div>
+					<div class=&quot;bee-block bee-block-6 bee-divider&quot;>
+						<div class=&quot;center bee-separator&quot; style=&quot;border-top:1px solid #A87165;width:100%;&quot;></div>
+					</div>
+					<div class=&quot;bee-block bee-block-7 bee-heading&quot;>
+						<h3><a href=&quot;javascript:void('example.com')&quot; style=&quot;text-decoration: none; color: #000000;&quot; rel=&quot;noopener&quot;>Lorem Ipsum Dolor</a> </h3>
+					</div>
+					<div class=&quot;bee-block bee-block-8 bee-icons&quot;>
+						<div class=&quot;bee-icon bee-icon-last&quot;>
+							<div class=&quot;bee-content&quot;>
+								<div class=&quot;bee-icon-image&quot;><img src=&quot;https://d1oco4z2z1fhwp.cloudfront.net/templates/default/4421/calendar.png&quot; height=&quot;32px&quot; width=&quot;auto&quot;></div>
+								<div class=&quot;bee-icon-label bee-icon-label-right&quot;>10/10/2021</div>
+							</div>
+						</div>
+					</div>
+					<div class=&quot;bee-block bee-block-9 bee-paragraph&quot;>
+						<p style=&quot;word-break:break-word;&quot;><span>Lorem ipsum dolor sit amet, consectetuer adipiscing...</span></p>
+					</div>
+					<div class=&quot;bee-block bee-block-10 bee-button&quot;><a style=&quot;font-size: 16px; display: inline-block;&quot; class=&quot;bee-button-content&quot; href=&quot;http://www.example.com/&quot; target=&quot;_blank&quot;><span style=&quot;word-break: break-word; font-size: 16px; line-height: 200%; letter-spacing: 1px;&quot;>READ MORE →</span></a></div>
+					<div class=&quot;bee-block bee-block-11 bee-divider&quot;>
+						<div class=&quot;center bee-separator&quot; style=&quot;border-top:1px solid #A87165;width:100%;&quot;></div>
+					</div>
+					<div class=&quot;bee-block bee-block-12 bee-heading&quot;>
+						<h3><a href=&quot;javascript:void('example.com')&quot; style=&quot;text-decoration: none; color: #000000;&quot; rel=&quot;noopener&quot;>Lorem Ipsum Dolor</a> </h3>
+					</div>
+					<div class=&quot;bee-block bee-block-13 bee-icons&quot;>
+						<div class=&quot;bee-icon bee-icon-last&quot;>
+							<div class=&quot;bee-content&quot;>
+								<div class=&quot;bee-icon-image&quot;><img src=&quot;https://d1oco4z2z1fhwp.cloudfront.net/templates/default/4421/calendar.png&quot; height=&quot;32px&quot; width=&quot;auto&quot;></div>
+								<div class=&quot;bee-icon-label bee-icon-label-right&quot;>10/10/2021</div>
+							</div>
+						</div>
+					</div>
+					<div class=&quot;bee-block bee-block-14 bee-paragraph&quot;>
+						<p style=&quot;word-break:break-word;&quot;><span>Lorem ipsum dolor sit amet, consectetuer elit...</span></p>
+					</div>
+					<div class=&quot;bee-block bee-block-15 bee-button&quot;><a style=&quot;font-size: 16px; display: inline-block;&quot; class=&quot;bee-button-content&quot; href=&quot;http://www.example.com/&quot; target=&quot;_blank&quot;><span style=&quot;word-break: break-word; font-size: 16px; line-height: 200%; letter-spacing: 1px;&quot;>READ MORE →</span></a></div>
+					<div class=&quot;bee-block bee-block-16 bee-divider&quot;>
+						<div class=&quot;center bee-separator&quot; style=&quot;border-top:1px solid #A87165;width:100%;&quot;></div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class=&quot;bee-row bee-row-20&quot;>
+			<div class=&quot;bee-row-content&quot;>
+				<div class=&quot;bee-col bee-col-1 bee-col-w12&quot;>
+					<div class=&quot;bee-block bee-block-1 bee-divider&quot;>
+						<div class=&quot;spacer&quot; style=&quot;height:50px;&quot;></div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class=&quot;bee-row bee-row-21&quot;>
+			<div class=&quot;bee-row-content&quot;>
+				<div class=&quot;bee-col bee-col-1 bee-col-w12&quot;>
+					<div class=&quot;bee-block bee-block-1 bee-divider&quot;>
+						<div class=&quot;spacer&quot; style=&quot;height:40px;&quot;></div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class=&quot;bee-row bee-row-22&quot;>
+			<div class=&quot;bee-row-content&quot;>
+				<div class=&quot;bee-col bee-col-1 bee-col-w4&quot;>
+					<div class=&quot;bee-block bee-block-1 bee-image&quot;><a href=&quot;http://www.example.com/&quot; target=&quot;_blank&quot;><img class=&quot; bee-fixedwidth&quot; src=&quot;https://d1oco4z2z1fhwp.cloudfront.net/templates/default/4421/logo.png&quot; style=&quot;max-width:185px;&quot; alt=&quot;Logo&quot;></a></div>
+					<div class=&quot;bee-block bee-block-2 bee-paragraph&quot;>
+						<p style=&quot;word-break:break-word;&quot;><span>Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</span></p>
+					</div>
+					<div class=&quot;bee-block bee-block-3 bee-paragraph&quot;>
+						<p style=&quot;word-break:break-word;&quot;><span>2021 © All rights reserved</span></p>
+					</div>
+				</div>
+				<div class=&quot;bee-col bee-col-2 bee-col-w3&quot;>
+					<div class=&quot;bee-block bee-block-1 bee-heading&quot;>
+						<h3>Contact </h3>
+					</div>
+					<div class=&quot;bee-block bee-block-2 bee-menu&quot;>
+						<nav class=&quot;bee-menu&quot;>
+							<ul class=&quot;bee-vertical&quot;>
+								<li><a href=&quot;http://www.example.com/&quot; target=&quot;_blank&quot; title=&quot;&quot;>(555) 555-1234</a></li>
+								<li><a href=&quot;http://www.example.com/&quot; target=&quot;_blank&quot; title=&quot;&quot;>example@example.com</a></li>
+							</ul>
+						</nav>
+					</div>
+					<div class=&quot;bee-block bee-block-3 bee-social&quot;>
+						<div class=&quot;content&quot;><span class=&quot;icon&quot; style=&quot;padding:0 5px 0 5px;&quot;><a href=&quot;https://www.facebook.com&quot; target=&quot;_blank&quot;><img src=&quot;https://app-rsrc.getbee.io/public/resources/social-networks-icon-sets/t-outline-circle-dark-gray/facebook@2x.png&quot; alt=&quot;Facebook&quot; title=&quot;facebook&quot;></a></span><span class=&quot;icon&quot; style=&quot;padding:0 5px 0 5px;&quot;><a href=&quot;https://www.twitter.com&quot; target=&quot;_blank&quot;><img src=&quot;https://app-rsrc.getbee.io/public/resources/social-networks-icon-sets/t-outline-circle-dark-gray/twitter@2x.png&quot; alt=&quot;Twitter&quot; title=&quot;twitter&quot;></a></span><span class=&quot;icon&quot; style=&quot;padding:0 5px 0 5px;&quot;><a href=&quot;https://www.instagram.com&quot; target=&quot;_blank&quot;><img src=&quot;https://app-rsrc.getbee.io/public/resources/social-networks-icon-sets/t-outline-circle-dark-gray/instagram@2x.png&quot; alt=&quot;Instagram&quot; title=&quot;instagram&quot;></a></span><span class=&quot;icon&quot; style=&quot;padding:0 5px 0 5px;&quot;><a href=&quot;https://www.youtube.com&quot; target=&quot;_blank&quot;><img src=&quot;https://app-rsrc.getbee.io/public/resources/social-networks-icon-sets/t-outline-circle-dark-gray/youtube@2x.png&quot; alt=&quot;YouTube&quot; title=&quot;YouTube&quot;></a></span></div>
+					</div>
+				</div>
+				<div class=&quot;bee-col bee-col-3 bee-col-w2&quot;>
+					<div class=&quot;bee-block bee-block-1 bee-heading&quot;>
+						<h3>Links </h3>
+					</div>
+					<div class=&quot;bee-block bee-block-2 bee-menu&quot;>
+						<nav class=&quot;bee-menu&quot;>
+							<ul class=&quot;bee-vertical&quot;>
+								<li><a href=&quot;http://www.example.com/&quot; target=&quot;_blank&quot; title=&quot;&quot;>Catalog</a></li>
+								<li><a href=&quot;http://www.example.com/&quot; target=&quot;_blank&quot; title=&quot;&quot;>About</a></li>
+								<li><a href=&quot;http://www.example.com/&quot; target=&quot;_blank&quot; title=&quot;&quot;>Blog</a></li>
+								<li><a href=&quot;http://www.example.com/&quot; target=&quot;_blank&quot; title=&quot;&quot;>Help</a></li>
+							</ul>
+						</nav>
+					</div>
+				</div>
+				<div class=&quot;bee-col bee-col-4 bee-col-w3&quot;>
+					<div class=&quot;bee-block bee-block-1 bee-heading&quot;>
+						<h3>Newsletter </h3>
+					</div>
+					<div class=&quot;bee-block bee-block-2 bee-form&quot;>
+						<form accept-charset=&quot;UTF-8&quot; action=&quot;ACTION_PLACEHOLDER&quot; autocomplete=&quot;on&quot; enctype=&quot;multipart/form-data&quot; method=&quot;post&quot; target=&quot;_self&quot;>
+							<div class=&quot;bee-form-row&quot;>
+								<div class=&quot;bee-field bee-field-r21c3m1i3&quot;><input id=&quot;r21c3m1i3&quot; name=&quot;email&quot; type=&quot;email&quot; placeholder=&quot;Email&quot; required=&quot;&quot;></div>
+							</div>
+							<div class=&quot;bee-form-row&quot;>
+								<div class=&quot;bee-field bee-field-r21c3m1i11&quot;>
+									<div class=&quot;bee-button-container&quot;><button id=&quot;r21c3m1i11&quot; name=&quot;submit&quot; type=&quot;submit&quot; value=&quot;SIGN UP&quot;>SIGN UP</button></div>
+								</div>
+							</div>
+						</form>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class=&quot;bee-row bee-row-23&quot;>
+			<div class=&quot;bee-row-content&quot;>
+				<div class=&quot;bee-col bee-col-1 bee-col-w12&quot;>
+					<div class=&quot;bee-block bee-block-1 bee-divider&quot;>
+						<div class=&quot;spacer&quot; style=&quot;height:40px;&quot;></div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class=&quot;bee-row bee-row-24&quot;>
+			<div class=&quot;bee-row-content&quot;>
+				<div class=&quot;bee-col bee-col-1 bee-col-w12&quot;>
+					<div class=&quot;bee-block bee-block-1 bee-icons&quot;>
+						<div class=&quot;bee-icon bee-icon-last&quot;>
+							<div class=&quot;bee-content&quot;>
+								<div class=&quot;bee-icon-image&quot;><a href=&quot;http://designedwithbeefree.com/&quot; target=&quot;_blank&quot; title=&quot;Designed with Beefree&quot;><img src=&quot;https://d1oco4z2z1fhwp.cloudfront.net/assets/Beefree-logo.png&quot; alt=&quot;Beefree Logo&quot; height=&quot;32px&quot; width=&quot;auto&quot;></a></div>
+								<div class=&quot;bee-icon-label bee-icon-label-right&quot;><a href=&quot;http://designedwithbeefree.com/&quot; target=&quot;_blank&quot; title=&quot;Designed with Beefree&quot;>Designed with Beefree</a></div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+<script type=&quot;text/javascript&quot; src=&quot;https://app-rsrc.getbee.io/public/resources/preview/dark-mode/dark-mode.min.js&quot;></script>
+
+</body></html>
