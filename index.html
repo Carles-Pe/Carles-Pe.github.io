@@ -1,408 +1,191 @@
-<!DOCTYPE html><html lang=""><head>
-	<title></title>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width">
-	<link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet" type="text/css">
-	<link href="https://fonts.googleapis.com/css?family=Playfair+Display" rel="stylesheet" type="text/css">
-	
+<html lang="en"><head>
+    <meta charset="UTF-8">
+    
+  
+      <link rel="apple-touch-icon" type="image/png" href="https://cpwebassets.codepen.io/assets/favicon/apple-touch-icon-5ae1a0698dcc2402e9712f7d01ed509a57814f994c660df9f7a952f3060705ee.png">
+  
+      <meta name="apple-mobile-web-app-title" content="CodePen">
+  
+      <link rel="shortcut icon" type="image/x-icon" href="https://cpwebassets.codepen.io/assets/favicon/favicon-aec34940fbc1a6e787974dcd360f2c6b63348d4b1f4e06c77743096d55480f33.ico">
+  
+      <link rel="mask-icon" type="image/x-icon" href="https://cpwebassets.codepen.io/assets/favicon/logo-pin-b4b4269c16397ad2f0f7a01bcdf513a1994f4c94b8af2f191c09eb0d601762b1.svg" color="#111">
+  
+  
+  
+    
+      <script src="https://cpwebassets.codepen.io/assets/common/stopExecutionOnTimeout-2c7831bb44f98c1391d6a4ffda0e1fd302503391ca806e7fcc7b9b87197aec26.js"></script>
+  
+  
+    <title>Carles Pedrals</title>
+  
+      <link rel="canonical" href="https://codepen.io/mariosmaselli/pen/popWjr">
+    <meta name="viewport" content="width=device-width">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
+  
+    
+    
+<link rel="stylesheet" href="./assets/styles.scss">
+  
     <script>
-      document.addEventListener("DOMContentLoaded", function() {
-        OverlayScrollbars(document.querySelectorAll("body"), { });
-      });
-      function scrollElementIntoView(elementId){
-        var element = document.getElementById(elementId);
-        if (element) {
-          element.scrollIntoView({ behavior: "smooth", block: "center", inline: "nearest" });
-        }
-      }
-    </script>
-  <link rel="stylesheet" type="text/css" href="styles.css"/>
-</head>
+    window.console = window.console || function(t) {};
+  </script>
+  
+    
+    
+  </head>
+  
+  <body translate="no">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <div class="resume-wrapper">
+      <section class="profile section-padding">
+          <div class="container">
+              <div class="picture-resume-wrapper">
+          <div class="picture-resume">
+          <span><img src="./assets/images/profile.png" alt=""></span>
 
-<body>
-	<div class="main-page-container">
-		<div class="common-row header row-black">
-			<div class="row-content no_stack">
-				<div class="bee-col bee-col-1 bee-col-w7">
-					<div class=" "><img src="/assets/cplogo.png" style="max-width:100px;" alt="Logo"></div>
-				</div>
-				<div class="bee-col bee-col-2 bee-col-w7">
-					<div class="  bee-menu">
-						<nav class="bee-menu">
-							<ul class="bee-horizontal with-bee-hamburger">
-								<li><a href="http://www.example.com/" target="_blank" title="">Catalog</a></li>
-								<li><a href="http://www.example.com/" target="_blank" title="">About</a></li>
-								<li><a href="http://www.example.com/" target="_blank" title="">Blog</a></li>
-							</ul>
-						</nav>
-					</div>
-				</div>
-			</div>
-		</div>
-		<div class="common-row about-me row-grey">
-			<div class="row-content">
-				<div class="bee-col bee-col-1">
-					<div class="cv-name common-heading">
-						<h1>Carles Pedrals</h1>
-					</div>
-					<div class=" -2 common-paragraph">
-						<p style="word-break:break-word;"><span>Software Engineering, AI Development and Quantum Algorithms</span></p>
-					</div>
-				</div>
-				<div class="bee-col bee-col-2 bee-col-w6">
-					<div class="  common-image"><img class="fullwidthOnMobile" src="/assets/profile.png" style="min-width:300px; " alt="Girl wearing jewellery"></div>
-				</div>
-			</div>
-		</div>
+        </div>
+           <div class="clearfix"></div>
+   </div>
+        <div class="name-wrapper">
+          <h1>Carles <br>Pedrals</h1>
+        </div>
+        <div class="clearfix"></div>
+        <div class="contact-presentation"> <!-- YOUR PRESENTATION RESUME  -->
+            <p>Hi! I am Carles and I am a <span class="bold">Engineering Physics</span> graduate and <span class="bold">Software Engineering</span> major. 
+                Below, you will find a summary of my education, experience and some <a href="#portfolio"><span class="linker">developed projects</span></a>!</p>
+        
+        </div>
+          </div>
 
-		<div class="common-row row-grey">
-			<div class="row-content">
-				<div class="spacer" style="height:40px;"></div>
-			</div>
-		</div>
-		<div class="common-row row-black ">
-			<div class="row-content">
-				<div class="bee-col bee-col-1 bee-col-w8">
-					<div class="  common-heading">
-						<h2 style="color: white;">Catalog </h2>
-					</div>
-				</div>
-				<div class="bee-col bee-col-2 bee-col-w4">
-					<div class="  bee-button"><a style="font-size: 22px; display: inline-block;" class="bee-button-content" href="http://www.example.com/" target="_blank"><span style="word-break: break-word; font-size: 22px; line-height: 200%; letter-spacing: 2px;"><span style="font-size: 22px;">SEE ALL →</span></span></a></div>
-				</div>
-			</div>
-		</div>
-		<div class="common-row bee-row-6">
-			<div class="row-content">
-				<div class="bee-col bee-col-1 bee-col-w12">
-					<div class="  bee-divider">
-						<div class="spacer" style="height:10px;"></div>
-					</div>
-				</div>
-			</div>
-		</div>
-		<div class="common-row bee-row-7">
-			<div class="row-content">
-				<div class="bee-col bee-col-1 bee-col-w4">
-					<div class="  common-image"><a href="http://www.example.com/" target="_blank"><img class="bee-center bee-fixedwidth fullwidthOnMobile" src="https://d1oco4z2z1fhwp.cloudfront.net/templates/default/4421/category1.png" style="max-width:260px;" alt="Ring"></a></div>
-					<div class=" -2 common-heading">
-						<h3><span style="color: #000000;"><a href="http://www.example.com/" target="_blank" style="text-decoration: none; color: #000000;" rel="noopener">Rings</a></span> </h3>
-					</div>
-				</div>
-				<div class="bee-col bee-col-2 bee-col-w4">
-					<div class="  common-image"><a href="http://www.example.com/" target="_blank"><img class="bee-center bee-fixedwidth fullwidthOnMobile" src="https://d1oco4z2z1fhwp.cloudfront.net/templates/default/4421/category2.png" style="max-width:260px;" alt="Necklace"></a></div>
-					<div class=" -2 common-heading">
-						<h3><span style="color: #000000;"><a href="http://www.example.com/" target="_blank" style="text-decoration: none; color: #000000;" rel="noopener">Necklaces</a></span> </h3>
-					</div>
-				</div>
-				<div class="bee-col bee-col-3 bee-col-w4">
-					<div class="  common-image"><a href="http://www.example.com/" target="_blank"><img class="bee-center bee-fixedwidth fullwidthOnMobile" src="https://d1oco4z2z1fhwp.cloudfront.net/templates/default/4421/category3.png" style="max-width:260px;" alt="Earring"></a></div>
-					<div class=" -2 common-heading">
-						<h3><span style="color: #000000;"><a href="http://www.example.com/" target="_blank" style="text-decoration: none; color: #000000;" rel="noopener">Earrings</a></span> </h3>
-					</div>
-				</div>
-			</div>
-		</div>
-		<div class="common-row bee-row-8">
-			<div class="row-content">
-				<div class="bee-col bee-col-1 bee-col-w12">
-					<div class="  bee-divider">
-						<div class="spacer" style="height:60px;"></div>
-					</div>
-				</div>
-			</div>
-		</div>
-		<div class="common-row bee-row-9">
-			<div class="row-content">
-				<div class="bee-col bee-col-1 bee-col-w12">
-					<div class="  bee-divider">
-						<div class="spacer" style="height:50px;"></div>
-					</div>
-					<div class=" -2 common-heading">
-						<h2>Special offer </h2>
-					</div>
-					<div class=" -3 common-paragraph">
-						<p style="word-break:break-word;"><span>Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</span></p>
-					</div>
-				</div>
-			</div>
-		</div>
-		<div class="common-row bee-row-10">
-			<div class="row-content">
-				<div class="bee-col bee-col-1 bee-col-w12">
-					<div class="  bee-divider">
-						<div class="spacer" style="height:10px;"></div>
-					</div>
-				</div>
-			</div>
-		</div>
-		<div class="common-row bee-row-11">
-			<div class="row-content">
-				<div class="bee-col bee-col-1 bee-col-w3">
-					<div class="  common-image"><img class="fullwidthOnMobile" src="https://d1oco4z2z1fhwp.cloudfront.net/templates/default/4421/item1.jpg" style="max-width:185px;" alt="Necklace"></div>
-					<div class=" -2 common-heading">
-						<h3>Lorem Ipsum<br> </h3>
-					</div>
-					<div class=" -3 common-paragraph">
-						<p style="word-break:break-word;"><span>$5 000</span></p>
-					</div>
-					<div class=" -4 common-paragraph">
-						<p style="word-break:break-word;"><span>Tincidunt amet ut laoreet magna aliquam erat volutpat.</span></p>
-					</div>
-					<div class=" -5 bee-button"><a style="font-size: 22px; display: inline-block;" class="bee-button-content" href="http://www.example.com/" target="_blank"><span style="word-break: break-word; font-size: 22px; line-height: 200%; letter-spacing: 2px;"><span style="font-size: 22px;">BUY</span></span></a></div>
-				</div>
-				<div class="bee-col bee-col-2 bee-col-w3">
-					<div class="  common-image"><img class="fullwidthOnMobile" src="https://d1oco4z2z1fhwp.cloudfront.net/templates/default/4421/item2.jpg" style="max-width:185px;" alt="Ring"></div>
-					<div class=" -2 common-heading">
-						<h3>Lorem Ipsum<br> </h3>
-					</div>
-					<div class=" -3 common-paragraph">
-						<p style="word-break:break-word;"><span>$2 000</span></p>
-					</div>
-					<div class=" -4 common-paragraph">
-						<p style="word-break:break-word;"><span>Tincidunt amet ut laoreet magna aliquam erat volutpat.</span></p>
-					</div>
-					<div class=" -5 bee-button"><a style="font-size: 22px; display: inline-block;" class="bee-button-content" href="http://www.example.com/" target="_blank"><span style="word-break: break-word; font-size: 22px; line-height: 200%; letter-spacing: 2px;"><span style="font-size: 22px;">BUY</span></span></a></div>
-				</div>
-				<div class="bee-col bee-col-3 bee-col-w3">
-					<div class="  common-image"><img class="fullwidthOnMobile" src="https://d1oco4z2z1fhwp.cloudfront.net/templates/default/4421/item3.jpg" style="max-width:185px;" alt="Bracelet"></div>
-					<div class=" -2 common-heading">
-						<h3>Lorem Ipsum<br> </h3>
-					</div>
-					<div class=" -3 common-paragraph">
-						<p style="word-break:break-word;"><span>$3 000</span></p>
-					</div>
-					<div class=" -4 common-paragraph">
-						<p style="word-break:break-word;"><span>Tincidunt amet ut laoreet magna aliquam erat volutpat.</span></p>
-					</div>
-					<div class=" -5 bee-button"><a style="font-size: 22px; display: inline-block;" class="bee-button-content" href="http://www.example.com/" target="_blank"><span style="word-break: break-word; font-size: 22px; line-height: 200%; letter-spacing: 2px;"><span style="font-size: 22px;">BUY</span></span></a></div>
-				</div>
-				<div class="bee-col bee-col-4 bee-col-w3">
-					<div class="  common-image"><img class="fullwidthOnMobile" src="https://d1oco4z2z1fhwp.cloudfront.net/templates/default/4421/item4.jpg" style="max-width:185px;" alt="Necklace"></div>
-					<div class=" -2 common-heading">
-						<h3>Lorem Ipsum<br> </h3>
-					</div>
-					<div class=" -3 common-paragraph">
-						<p style="word-break:break-word;"><span>$1 000</span></p>
-					</div>
-					<div class=" -4 common-paragraph">
-						<p style="word-break:break-word;"><span>Tincidunt amet ut laoreet magna aliquam erat volutpat.</span></p>
-					</div>
-					<div class=" -5 bee-button"><a style="font-size: 22px; display: inline-block;" class="bee-button-content" href="http://www.example.com/" target="_blank"><span style="word-break: break-word; font-size: 22px; line-height: 200%; letter-spacing: 2px;"><span style="font-size: 22px;">BUY</span></span></a></div>
-				</div>
-			</div>
-		</div>
-		<div class="common-row bee-row-12">
-			<div class="row-content">
-				<div class="bee-col bee-col-1 bee-col-w12">
-					<div class="  bee-divider">
-						<div class="spacer" style="height:60px;"></div>
-					</div>
-				</div>
-			</div>
-		</div>
-		<div class="common-row bee-row-13">
-			<div class="row-content">
-				<div class="bee-col bee-col-1 bee-col-w12">
-					<div class="  bee-divider">
-						<div class="spacer" style="height:40px;"></div>
-					</div>
-				</div>
-			</div>
-		</div>
-		<div class="common-row bee-row-14">
-			<div class="row-content">
-				<div class="bee-col bee-col-1 bee-col-w6">
-					<div class="  common-image"><img class="bee-center fullwidthOnMobile" src="https://d1oco4z2z1fhwp.cloudfront.net/templates/default/4421/special.png" style="max-width:410px;" alt="Special offer image"></div>
-				</div>
-				<div class="bee-col bee-col-2 bee-col-w6">
-					<div class="  common-heading">
-						<h2>Sign up for more special offers </h2>
-					</div>
-					<div class=" -2 common-paragraph">
-						<p style="word-break:break-word;"><span>Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</span></p>
-					</div>
-					<div class=" -3 bee-form">
-						<form accept-charset="UTF-8" action="ACTION_PLACEHOLDER" autocomplete="on" enctype="multipart/form-data" method="post" target="_self">
-							<div class="bee-form-row">
-								<div class="bee-field bee-field-r13c1m2i1"><input id="r13c1m2i1" name="firstname" type="text" placeholder="Name" required=""></div>
-							</div>
-							<div class="bee-form-row">
-								<div class="bee-field bee-field-r13c1m2i3"><input id="r13c1m2i3" name="email" type="email" placeholder="Email" required=""></div>
-							</div>
-							<div class="bee-form-row">
-								<div class="bee-field bee-field-r13c1m2i10 bee-inline-field"><span class="bee-form-option-wrapper"><input id="r13c1m2i10" name="privacy_policy" type="checkbox"><label class="inline" for="r13c1m2i10">&amp;nbsp;I agree to the <a href="https://your_privacy_url" target="_blank">Privacy Policy</a></label></span></div>
-							</div>
-							<div class="bee-form-row">
-								<div class="bee-field bee-field-r13c1m2i11">
-									<div class="bee-button-container"><button id="r13c1m2i11" name="submit" type="submit" value="SIGN UP">SIGN UP</button></div>
-								</div>
-							</div>
-						</form>
-					</div>
-				</div>
-			</div>
-		</div>
-		<div class="common-row bee-row-15">
-			<div class="row-content">
-				<div class="bee-col bee-col-1 bee-col-w12">
-					<div class="  bee-divider">
-						<div class="spacer" style="height:40px;"></div>
-					</div>
-				</div>
-			</div>
-		</div>
-		<div class="common-row bee-row-16">
-			<div class="row-content">
-				<div class="bee-col bee-col-1 bee-col-w12">
-					<div class="  bee-divider">
-						<div class="spacer" style="height:50px;"></div>
-					</div>
-				</div>
-			</div>
-		</div>
-		<div class="common-row bee-row-17">
-			<div class="row-content">
-				<div class="bee-col bee-col-1 bee-col-w8">
-					<div class="  common-heading">
-						<h2>Blog </h2>
-					</div>
-				</div>
-				<div class="bee-col bee-col-2 bee-col-w4">
-					<div class="  bee-button"><a style="font-size: 22px; display: inline-block;" class="bee-button-content" href="http://www.example.com/" target="_blank"><span style="word-break: break-word; font-size: 22px; line-height: 200%; letter-spacing: 2px;"><span style="font-size: 22px;">SEE ALL →</span></span></a></div>
-				</div>
-			</div>
-		</div>
-		<div class="common-row bee-row-18">
-			<div class="row-content">
-				<div class="bee-col bee-col-1 bee-col-w12">
-					<div class="  bee-divider">
-						<div class="spacer" style="height:30px;"></div>
-					</div>
-				</div>
-			</div>
-		</div>
-		<div class="common-row bee-row-19">
-			<div class="row-content">
-				<div class="bee-col bee-col-1 bee-col-w8">
-					<div class="  common-image"><img class="bee-center fullwidthOnMobile" src="https://d1oco4z2z1fhwp.cloudfront.net/templates/default/4421/blog_image.jpg" style="max-width:560px;" alt="Blog image"></div>
-					<div class=" -2 common-heading">
-						<h3><a href="javascript:void('example.com')" style="text-decoration: none; color: #000000;" rel="noopener">Lorem Ipsum Dolor Sit Amet</a> </h3>
-					</div>
-					<div class=" -3 bee-icons">
-						<div class="bee-icon bee-icon-last">
-							<div class="bee-content">
-								<div class="bee-icon-image"><img src="https://d1oco4z2z1fhwp.cloudfront.net/templates/default/4421/calendar.png" height="32px" width="auto"></div>
-								<div class="bee-icon-label bee-icon-label-right">10/10/2021</div>
-							</div>
-						</div>
-					</div>
-					<div class=" -4 common-paragraph">
-						<p style="word-break:break-word;"><span>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.</span></p>
-					</div>
-					<div class=" -5 bee-button"><a style="font-size: 18px; display: inline-block;" class="bee-button-content" href="http://www.example.com/" target="_blank"><span style="word-break: break-word; font-size: 18px; line-height: 200%; letter-spacing: 2px;"><span style="font-size: 18px;">READ MORE</span></span></a></div>
-				</div>
-				<div class="bee-col bee-col-2 bee-col-w4">
-					<div class="  bee-divider">
-						<div class="center bee-separator" style="border-top:1px solid #A87165;width:100%;"></div>
-					</div>
-					<div class=" -2 common-heading">
-						<h3><a href="javascript:void('example.com')" style="text-decoration: none; color: #000000;" rel="noopener">Lorem Ipsum Dolor</a> </h3>
-					</div>
-					<div class=" -3 bee-icons">
-						<div class="bee-icon bee-icon-last">
-							<div class="bee-content">
-								<div class="bee-icon-image"><img src="https://d1oco4z2z1fhwp.cloudfront.net/templates/default/4421/calendar.png" height="32px" width="auto"></div>
-								<div class="bee-icon-label bee-icon-label-right">10/10/2021</div>
-							</div>
-						</div>
-					</div>
-					<div class=" -4 common-paragraph">
-						<p style="word-break:break-word;"><span>Lorem ipsum dolor sit amet, consectetuer adipiscing elit...</span></p>
-					</div>
-					<div class=" -5 bee-button"><a style="font-size: 16px; display: inline-block;" class="bee-button-content" href="http://www.example.com/" target="_blank"><span style="word-break: break-word; font-size: 16px; line-height: 200%; letter-spacing: 1px;">READ MORE →</span></a></div>
-					<div class=" -6 bee-divider">
-						<div class="center bee-separator" style="border-top:1px solid #A87165;width:100%;"></div>
-					</div>
-					<div class=" -7 common-heading">
-						<h3><a href="javascript:void('example.com')" style="text-decoration: none; color: #000000;" rel="noopener">Lorem Ipsum Dolor</a> </h3>
-					</div>
-					<div class=" -8 bee-icons">
-						<div class="bee-icon bee-icon-last">
-							<div class="bee-content">
-								<div class="bee-icon-image"><img src="https://d1oco4z2z1fhwp.cloudfront.net/templates/default/4421/calendar.png" height="32px" width="auto"></div>
-								<div class="bee-icon-label bee-icon-label-right">10/10/2021</div>
-							</div>
-						</div>
-					</div>
-					<div class=" -9 common-paragraph">
-						<p style="word-break:break-word;"><span>Lorem ipsum dolor sit amet, consectetuer adipiscing...</span></p>
-					</div>
-					<div class=" 0 bee-button"><a style="font-size: 16px; display: inline-block;" class="bee-button-content" href="http://www.example.com/" target="_blank"><span style="word-break: break-word; font-size: 16px; line-height: 200%; letter-spacing: 1px;">READ MORE →</span></a></div>
-					<div class=" 1 bee-divider">
-						<div class="center bee-separator" style="border-top:1px solid #A87165;width:100%;"></div>
-					</div>
-					<div class=" 2 common-heading">
-						<h3><a href="javascript:void('example.com')" style="text-decoration: none; color: #000000;" rel="noopener">Lorem Ipsum Dolor</a> </h3>
-					</div>
-					<div class=" 3 bee-icons">
-						<div class="bee-icon bee-icon-last">
-							<div class="bee-content">
-								<div class="bee-icon-image"><img src="https://d1oco4z2z1fhwp.cloudfront.net/templates/default/4421/calendar.png" height="32px" width="auto"></div>
-								<div class="bee-icon-label bee-icon-label-right">10/10/2021</div>
-							</div>
-						</div>
-					</div>
-					<div class=" 4 common-paragraph">
-						<p style="word-break:break-word;"><span>Lorem ipsum dolor sit amet, consectetuer elit...</span></p>
-					</div>
-					<div class=" 5 bee-button"><a style="font-size: 16px; display: inline-block;" class="bee-button-content" href="http://www.example.com/" target="_blank"><span style="word-break: break-word; font-size: 16px; line-height: 200%; letter-spacing: 1px;">READ MORE →</span></a></div>
-					<div class=" 6 bee-divider">
-						<div class="center bee-separator" style="border-top:1px solid #A87165;width:100%;"></div>
-					</div>
-				</div>
-			</div>
-		</div>
-		<div class="common-row bee-row-20">
-			<div class="row-content">
-				<div class="bee-col bee-col-1 bee-col-w12">
-					<div class="  bee-divider">
-						<div class="spacer" style="height:50px;"></div>
-					</div>
-				</div>
-			</div>
-		</div>
-		<div class="common-row bee-row-21">
-			<div class="row-content">
-				<div class="bee-col bee-col-1 bee-col-w12">
-					<div class="  bee-divider">
-						<div class="spacer" style="height:40px;"></div>
-					</div>
-				</div>
-			</div>
-		</div>
-		<div class="common-row bee-row-22">
-			<div class="row-content">
-				<div class="bee-col bee-col-1 bee-col-w4">
-					<div class="  common-image"><a href="http://www.example.com/" target="_blank"><img class=" bee-fixedwidth" src="/assets/cplogo.png" style="max-width:100px;" alt="Logo"></a></div>
-					<div class=" -2 common-paragraph">
-						<p style="word-break:break-word;"><span>CP Solutions</span></p>
-					</div>
-					<div class=" -3 common-paragraph">
-						<p style="word-break:break-word;"><span>2025 © All rights reserved</span></p>
-					</div>
-				</div>
-			</div>
-		</div>
-		<div class="common-row bee-row-23">
-			<div class="row-content">
-				<div class="bee-col bee-col-1 bee-col-w12">
-					<div class="  bee-divider">
-						<div class="spacer" style="height:40px;"></div>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
+		  <div class="section-wrapper clearfix" style="width: 100%;">
+            <h3 class="section-title">Skills</h3> 
+            <div class="experience-title">
+                <ul class="styled-list">
+                    <li>- AI Development tools, Pytorch, Pytorch Geometric, TensorFlow</li>
+                    <li>- Quantum Computing algorithms development, Qiskit</li>
+                    <li>- Developed also in Java, NodeJS and others</li>
+                    <li>- Web development, HTML, CSS, JS, React</li>
+                    <li>- People skills and leadership working asa Restaurant Manager</li>
+                </ul>
+            </div> 
+            
+          
+        </div>
+      </section>
+    
+    <section class="experience section-padding">
+        <div class="container">
+            <h3 class="experience-title">Relevant Experience</h3>
+        
+        <div class="experience-wrapper">
+            <div class="company-wrapper clearfix">
+                <div class="experience-title"><a href="https://www.ntnu.edu/"><span class="linker">NTNU</span></a>, Trondheim, Norway</div> 
+            <div class="time">August 2023 to July 2024</div>
+            </div>
+          
+          <div class="job-wrapper clearfix">
+              <div class="experience-title">Timeseries forecasting AI developer, Quantum Computing researcher</div> 
+            <div class="company-description">
+                <p>Development of a custom energy consumption forcasting <span class="bold">AI</span> model for microgrids and individual users in a national power-grid.</p>
+                <p>Design of <span class="bold">quantum algorithms</span> for logistic problems applications.</p>  
+            </div>
+          </div>
+          
+          <div class="company-wrapper clearfix">
+                <div class="experience-title"><a href="https://inlab.fib.upc.edu/"><span class="linker">InLab-FIB, UPC</span></a>, Barcelona, Spain</div> 
+            <div class="time">January 2023 - August 2023</div>
+            </div>
+          
+           <div class="job-wrapper clearfix">
+              <div class="experience-title">Graph Neural Network developer at a national project (AIRTOS)</div> <!-- JOB TITLE  -->
+            <div class="company-description">
+                <p>Lead developer in a program utilizing <span class="bold">AI</span> for <span class="bold">traffic forecasting</span> using realtime information on <span class="bold">car flux</span> per road and from the traffic light configuration</p>
+                <p><span class="bold">Implementing</span> this AI-driven tool to facilitate <span class="bold">decision-making</span> in the traffic light control room during a pilot trial.</p> 
+            </div>
+          </div>
+  
+          
+        </div>
 
-</body></html>
+        
+        <div class="section-wrapper clearfix" style="width: 100%;">
+            <h3 class="section-title">Academic Education</h3> 
+            <div class="experience-title">Engineering Physics bachelor <a href="https://upc.edu/">(UPC)</a></div> 
+            <div class="experience-title">Informatics Engineering bachelor <a href="https://fib.upc.edu/">(FIB-UPC)</a></div>  
+            <br>          
+        </div>
+    
+        
+        </div>
+    </section>
+    
+    <section id="portfolio" class="portfolio section-padding">
+        <div class="container">
+            <h3 class="portfolio-title">Portfolio</h3>
+            
+            <div class="portfolio-wrapper">
+                <div class="description-wrapper clearfix">
+                    <div class="portfolio-title">CV Manager App</div>
+                    <div class="time">A self-developed, production-ready, .NET application developed using clean architecture principles, combined with a React & Typescript frontend. 
+                        Built as a scalable, maintainable, and secure software solution, it's not just about managing CVs; it's about delivering a platform that is easy to extend, easy to maintain, 
+                        and provides a good using interface.</div>
+                </div>
+              
+                <div class="showcase-wrapper clearfix">
+                    <div class="portfolio-title"><a href="https://cvmanager.tech"><span class="linker">cvmanager.tech</span></a></div>
+                    <div>
+                        <p>This project is <span class="bold">operational</span>, and can be accessed at the url above. For a full showcase of functionalities, <span class="bold">credentials are needed</span>. Contact me via the email provided in my CV!</p>
+                        <p>More accurate description on the tool is provided <a href="https://github.com/Carles-Pe/CVManagerPublic"><span class="linker">here</span></a></p>
+                    </div>
+                </div>
+                
+              
+                <div class="showcase-wrapper clearfix" style="width: 70%;">
+					<div class="portfolio-title"><a href="./assets/Carles_Pedrals_Quantum_Computing_Thesis.pdf"><span class="linker">View at source</span></a></div>
+					<div>
+						<!-- <iframe id="QuantumThesisPdf" sandbox></iframe> -->
+						<!-- <iframe src="./assets/Carles_Pedrals_Quantum_Computing_Thesis.pdf" width="100%" height="300px"></iframe> -->
+						<object data="./assets/Carles_Pedrals_Quantum_Computing_Thesis.pdf" type="application/pdf" width="100%" height="600px">
+							<p>Your browser does not support PDFs. Please view at source</p>
+						</object>
+					</div>
+                </div>
+              
+                <div class="description-wrapper clearfix" style="width: 30%;">
+                    <div class="portfolio-title">STUDY OF OPTIMIZATION ALGORITHMS FOR
+						SUPERCONDUCTING QUBIT-BASED
+						QUANTUM COMPUTERS</div>
+                    <div class="showcase-description" style="max-height: 700px; overflow: auto;">
+                        <p><span class="bold">QAOA algorithm</span> is tested on an energy grid problem, aiming at the allocation of renewable energy sources on the <span class="bold">Scandinavian power grid</span> and evaluating different strategies for performing parameter optimization of QAOA ansatz circuits.
+							This process combines <span class="bold">fine-tuning parameters</span> using both quantum and classical methods. 
+							Multiple extensions inspired by literature such as the <span class="bold">Multiangle Approach</span>, initial parameter distributions, and diverse methodologies are explored and their efficiency is discussed, highlighting Gaussian distribution as a great naive option. 
+							A <span class="bold">new approach</span> to improve convergence using <span class="bold">neural networks</span> is proposed and many techniques are applied to envision an efficient quantum algorithm capable of handling real-time demand of power grid partitioning.</p>
+                    </div>
+                </div>
+            
+            </div>
+        </div>
+    </section>
+
+    
+    <div class="clearfix"></div>
+  </div>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/gsap/1.18.0/TweenMax.min.js"></script> 
+	<script>
+		let scrollTimeout;
+
+		document.addEventListener('scroll', () => {
+			document.body.classList.add('scrolling');
+
+			// Remove the class after 1 second of inactivity
+			clearTimeout(scrollTimeout);
+			scrollTimeout = setTimeout(() => {
+				document.body.classList.remove('scrolling');
+			}, 1000);
+		});
+
+
+	</script>
+  
+  
+  </body></html>
